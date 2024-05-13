@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css"> <!-- Assuming you have a separate CSS file for styles -->
+    <style>
+        .container {
+            margin-top: 50px;
+        }
+
+        /* Adjustments for small devices */
+        @media only screen and (max-width: 576px) {
+            .container {
+                margin-top: 20px;
+            }
+        }
+
+        /* Hide default select arrow */
+        select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background: url('data:image/svg+xml;utf8,<svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right;
+            background-size: 15px;
+            padding-right: 20px;
+        }
+
+    body{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    color:black;
+    width: 100%;
+}
+header{
+    background-color: green;
+    text-align: center;
+    padding: 10px;
+    color: black;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
+nav{
+    background-color: white;
+    padding: 15px;
+    text-align: center;
+}
+nav a{
+    color:black;
+    text-decoration:none;
+    padding: 10px;
+    margin: 10px;
+    font-weight: bold;
+}
+nav a:hover{
+    background-color:lightgray;
+}
+/* footer styles */
+.footer {
+        background-color: black;
+        color: #fff;
+        padding: 10px 0;
+    }
+    .footer .col-md-3 {
+    padding: 0; /* Remove padding from all columns */
+    max-width: 360px;
+    padding: 5px;
+}
+.footer .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+   .footer .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+   }
+    .footer h3 {
+        color: #fff;
+        text-align: center;
+    }
+
+    .footer p {
+        margin-bottom: 10px;
+        color: white;
+        text-align: center;
+    }
+
+    .social-icons {
+        list-style: none;
+        padding: 0;
+    }
+
+    .social-icons li {
+        display: inline-block; /* Display social icons horizontally */
+        margin-right: 10px;
+    }
+
+    .social-icons li:last-child {
+        margin-right: 0;
+    }
+
+    .social-icons a {
+        color: #fff;
+        font-size: 20px;
+    }
+
+    .social-icons a:hover {
+        color: #ffd700;
+    }
+
+    .newsletter-form {
+        margin-top: 20px;
+    }
+
+    .newsletter-form input[type="email"] {
+        width: 80%;
+        padding: 10px;
+        border: none;
+        border-radius: 3px;
+        margin-right: 5px; /* Adjusted margin */
+        float:left; /* Align left */
+        margin-bottom: 5px;
+    }
+
+    .newsletter-form button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 3px;
+        background-color: #ffd700;
+        color: #333;
+        cursor: pointer;
+        float: left; /* Align left */
+        margin-right: 5px; /* Adjusted margin */
+    }
+
+    .newsletter-form button:hover {
+        background-color: #ffcc00;
+    }
+
+    .gallery {
+        text-align: center;
+        margin-top: 20px;
+        margin-right: 0px;
+    }
+
+    .gallery img {
+        width: 60px;
+        height: 50px;
+        margin: 5px;
+    }
+
+    .gallery p {
+        color: #fff;
+    }
+
+    /* Media Queries */
+   /* Media Queries */
+@media only screen and (max-width: 992px) {
+    /* Adjust column width for medium-sized devices */
+    .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* Adjust column width for smaller devices */
+    .col-lg-4, .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* Adjustments for small devices such as smartphones */
+@media only screen and (max-width: 576px) {
+    /* Reduce padding for smaller screens */
+    .footer .col-md-3 {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    /* Adjust font size for smaller screens */
+    .footer h3 {
+        font-size: 16px;
+    }
+
+    .footer p {
+        font-size: 14px;
+    }
+
+    .social-icons a {
+        font-size: 18px;
+    }
+
+    .newsletter-form input[type="email"] {
+        width: 70%;
+        font-size: 14px;
+    }
+
+    .newsletter-form button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    /* Adjust gallery image size for smaller screens */
+    .gallery img {
+        width: 40px;
+        height: 35px;
+        margin: 3px;
+    }
+}
+.container6 {
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            margin-top: 0px;
+            width: 100%;
+            height: 100%;
+        }
+        @media (max-width: 576px) { /* Small devices (576px and below) */
+    .container6 {
+        display:flexbox !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin-top: 0px !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+footer {
+    background-color: goldenrod;
+    text-align: center;
+    position:relative; /* Change to absolute or relative */
+    bottom: 0; /* Position at the bottom of the page */
+    width: 100%; /* Take up full width */
+    font-size:12px;
+    padding: 2px;
+    color: white; /* Set text color to contrast with background */
+}
+ 
+    </style>
+</head>
+<body>
+    <body class="Services">
+        <header class="text-center py-4">
+            <h1 class="display-6">Feedback</h1>
+        </header>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="rooms.html">Rooms</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="services.html">Our Services</a>
+            <a href="booking.html">Booking</a>
+            <a href="Feedback.html">Feedback</a>
+
+        </nav>
+        <div class="container">
+            <h2 class="text-center">Feedback Form</h2>
+            <form id="feedbackForm" class="needs-validation" novalidate>
+                <img src="image62.jpg" class="img-fluid mb-3" alt="Feedback Image">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="name">Name:</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+                        <div class="invalid-feedback">Please enter your name.</div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                        <div class="invalid-feedback">Please enter a valid email address.</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter the subject of your feedback">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea class="form-control" id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+                    <div class="invalid-feedback">Please enter your message.</div>
+                </div>
+                <div class="form-group">
+                    <label for="rating">Rating:</label>
+                    <select class="form-control" id="rating" name="rating" required>
+                        <option value="">Select rating</option>
+                        <option value="5">★★★★★</option>
+                        <option value="4">★★★★</option>
+                        <option value="3">★★★</option>
+                        <option value="2">★★</option>
+                        <option value="1">★</option>
+                    </select>
+                    <div class="invalid-feedback">Please select a rating.</div>
+                </div>
+                <div class="form-group">
+                    <label for="attachment">Attachment:</label>
+                    <input type="file" class="form-control-file" id="attachment" name="attachment">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h3>About Us</h3>
+                        <p>Sadagiri, a luxurious five-star hotel nestled in the picturesque city of Kandy, offers a truly opulent experience for discerning travelers. Boasting an exquisite blend of modern elegance and cultural charm, this grand hotel stands as a symbol of sophistication and comfort.</p>
+                        <p>Situated amidst the lush landscapes of Kandy, Sadagiri provides guests with a tranquil escape from the bustling city life. The hotel's architecture reflects a harmonious fusion of contemporary design and traditional aesthetics, creating an ambiance that is both inviting and awe-inspiring.</p>
+                    </div>
+                    <div class="col-md-3">
+                        <h3>Contact Us</h3>
+                        <p>Email: sandagiriinfo@gmail.com</p>
+                        <p>Phone:  +94 71 933 8312</p>
+                        <p>Address:  Sandagiri Hotel, Mahaweli Raja Mawatha, Kandy Road</p>
+                        <br>
+                        <h3>Follow Us</h3>
+                        <ul class="social-icons">
+                            <li><a href="https://www.facebook.com/sandagiri"><i class="fab fa-facebook"></i></a></li>
+                            <li><a href="https://www.twitter.com/sandagiri"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="https://www.instagram.com/sandagiri"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                   
+                    <div class="col-md-3">
+                        <h3>Newsletter</h3>
+                        <p>Subscribe to our newsletter for updates.</p>
+                        <form class="newsletter-form">
+                            <input type="email" class="form-control" placeholder="Your email">
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                        </form>
+                    </div>
+                    <div class="col-md-3">
+                        <h3>Gallery</h3>
+                        <div class="gallery">
+                            <img src="image21.jpg" alt="Image 1">
+                            <img src="image13.jpg" alt="Image 2">
+                            <img src="image48.jpg" alt="Image 3"><br>
+                            <img src="image52.jpg" alt="Image 4">
+                            <img src="image57.jpg" alt="Image 5">
+                            <img src="image34.jpg" alt="Image 6"><br>
+                            <img src="image26.jpg" alt="Image 7">
+                            <img src="image12.jpg" alt="Image 8">
+                            <img src="image3.jpg" alt="Image 9">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <footer>
+            <p>&copy;Copyright- 2024 Sadagiri Hotels by S&C Group. All rights reserved.</p>
+        </footer>
+        <!-- Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+        <!-- Form Submission -->
+        <script>
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation');
+    
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+        </script>
+    
+        <!-- Form Submission Handling -->
+        <script>
+            $(document).ready(function() {
+                $('#feedbackForm').submit(function(event) {
+                    event.preventDefault();
+                    var formData = new FormData($(this)[0]);
+                    $.ajax({
+                        url: 'submit.php', // Specify your backend URL here
+                        type: 'POST',
+                        data: formData,
+                        async: false,
+                        success: function(data) {
+                            // Show success message or redirect to a thank you page
+                            alert('Feedback submitted successfully!');
+                            // Reset form after successful submission
+                            $('#feedbackForm')[0].reset();
+                        },
+                        cache: false,
+                        contentType: false,
+                        processData: false
+                    });
+                    return false;
+                });
+            });
+        </script>
+    <script>
+        // Get the form element
+        var form = document.getElementById('feedbackForm');
+    
+        // Add event listener for form submission
+        form.addEventListener('submit', function(event) {
+            // Prevent the default form submission behavior
+            event.preventDefault();
+    
+            // Perform form validation
+            if (form.checkValidity() === false) {
+                event.stopPropagation(); // Prevent the event from propagating further
+                form.classList.add('was-validated'); // Add Bootstrap's validation styles
+            } else {
+                // Simulate form submission (replace this with your actual form submission code)
+                // For demonstration purposes, we'll display an alert message
+                alert('Form submitted successfully!');
+                form.reset(); // Reset the form
+                form.classList.remove('was-validated'); // Remove Bootstrap's validation styles
+            }
+        });
+    </script>
+    </body>
+    
+    </html>

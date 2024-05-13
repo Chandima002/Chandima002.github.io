@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us</title>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="styles1.css"> <!-- Assuming you have a separate CSS file for styles -->
+<style>
+    body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+   }
+   .container5 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 0px;
+            width: 100%;
+            height: 100%;
+            
+        }
+    /* Add specific styles for the contact page here */
+    .contact-section {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 50px 0;
+        margin-top: 0px;
+        width: 100%;
+        height: 100%;
+        background-image: url('image.jpg'); /* Change 'background.jpg' to the path of your background image */
+        background-size: cover;
+        background-position: center;
+        color: #fff; /* Set text color to white for better contrast */
+
+    }
+
+    .contact-form {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        font-weight: bold;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    .btn-primary {
+        padding: 10px 30px;
+        font-size: 16px;
+        border-radius: 5px;
+        background-color: #007bff;
+        border: none;
+        color: #fff;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+
+    .contact-info {
+        text-align: center;
+        margin-top: 50px; /* Add space above the contact information */
+    }
+
+    .contact-info p {
+        margin-bottom: 10px;
+    }
+    .contact-form-container {
+    width: 100%;
+    padding: 20px;
+    border-radius: 5px;
+   }
+   .get-in-touch{
+    padding: 50px;
+    border-radius: 5px;
+    background-color: goldenrod;
+    width: 100%;
+    margin-right: 20px;
+
+   }
+   .contact-section {
+        padding: 50px 0;
+        background-image: url('image.jpg'); /* Change 'background.jpg' to the path of your background image */
+        background-size: cover;
+        background-position: center;
+        color: #fff; /* Set text color to white for better contrast */
+    }
+
+    .contact-form {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        font-weight: bold;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    .btn-primary {
+        padding: 10px 30px;
+        font-size: 16px;
+        border-radius: 5px;
+        background-color: #007bff;
+        border: none;
+        color: #fff;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+
+    .contact-info {
+        text-align: center;
+        margin-top: 50px; /* Add space above the contact information */
+    }
+
+    .contact-info p {
+        margin-bottom: 10px;
+    }
+
+
+    .image-container {
+    position: relative;
+    width: 100%;
+    height: auto; /* Adjust height as needed */
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+
+.image-text3 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 1;
+    background-color:  rgb(58, 57, 57);
+    padding: 10px;
+}
+
+.image-text3 h1,
+.image-text3 h3 {
+    margin: 0;
+    font-weight: bold;
+}
+
+.image-text3 h1 {
+    font-size: 3em; /* Adjust font size as needed */
+}
+
+.image-text3 h3 {
+    font-size: 1.5em; /* Adjust font size as needed */
+}
+/* Custom CSS for colors and styling */
+.booking-step {
+            background-color: #f8f9fa; /* Light gray background */
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 60px;
+            width: 220px;
+            height: 400px;
+        }
+        .step-number {
+            font-size: 65px; /* Increased font size for step numbers */
+            font-weight: bold;
+            color:black; 
+            margin-bottom: 25px; /* Adjusted margin */
+        }
+        .step-title {
+            font-size: 32px;
+            font-weight: bold;
+            color: #333; /* Black color for step titles */
+            margin-top: 20px;
+            margin-bottom: 10px; /* Adjusted margin */
+            text-align: center; /* Center-align the titles */
+            font-family: 'Times New Roman', Times, serif; /* Times New Roman font */
+        }
+        .step-description {
+            color: #666; /* Gray color for step descriptions */
+            margin-top: 10px;
+            text-align: center; /* Center-align the descriptions */
+            font-family: 'Times New Roman', Times, serif; /* Times New Roman font */
+        }
+        .step-dot {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: goldenrod; /* Goldenrod color for dots */
+            margin: 0 auto 20px; /* Adjusted margin */
+        }
+/* footer styles */
+.footer {
+        background-color: black;
+        color: #fff;
+        padding: 10px 0;
+    }
+    .footer .col-md-3 {
+    padding: 0; /* Remove padding from all columns */
+    max-width: 360px;
+    padding: 5px;
+}
+.footer .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+   .footer .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+   }
+    .footer h3 {
+        color: #fff;
+    }
+
+    .footer p {
+        margin-bottom: 10px;
+        color: white;
+    }
+
+    .social-icons {
+        list-style: none;
+        padding: 0;
+    }
+
+    .social-icons li {
+        display: inline-block; /* Display social icons horizontally */
+        margin-right: 10px;
+    }
+
+    .social-icons li:last-child {
+        margin-right: 0;
+    }
+
+    .social-icons a {
+        color: #fff;
+        font-size: 20px;
+    }
+
+    .social-icons a:hover {
+        color: #ffd700;
+    }
+
+    .newsletter-form {
+        margin-top: 20px;
+    }
+
+    .newsletter-form input[type="email"] {
+        width: 80%;
+        padding: 10px;
+        border: none;
+        border-radius: 3px;
+        margin-right: 5px; /* Adjusted margin */
+        float:left; /* Align left */
+        margin-bottom: 5px;
+    }
+
+    .newsletter-form button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 3px;
+        background-color: #ffd700;
+        color: #333;
+        cursor: pointer;
+        float: left; /* Align left */
+        margin-right: 5px; /* Adjusted margin */
+    }
+
+    .newsletter-form button:hover {
+        background-color: #ffcc00;
+    }
+
+    .gallery {
+        text-align: center;
+        margin-top: 20px;
+        margin-right: 0px;
+    }
+
+    .gallery img {
+        width: 60px;
+        height: 50px;
+        margin: 5px;
+    }
+
+    .gallery p {
+        color: #fff;
+    }
+
+    /* Media Queries */
+   /* Media Queries */
+@media only screen and (max-width: 992px) {
+    /* Adjust column width for medium-sized devices */
+    .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* Adjust column width for smaller devices */
+    .col-lg-4, .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* Adjustments for small devices such as smartphones */
+@media only screen and (max-width: 576px) {
+    /* Reduce padding for smaller screens */
+    .footer .col-md-3 {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    /* Adjust font size for smaller screens */
+    .footer h3 {
+        font-size: 16px;
+    }
+
+    .footer p {
+        font-size: 14px;
+    }
+
+    .social-icons a {
+        font-size: 18px;
+    }
+
+    .newsletter-form input[type="email"] {
+        width: 70%;
+        font-size: 14px;
+    }
+
+    .newsletter-form button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    /* Adjust gallery image size for smaller screens */
+    .gallery img {
+        width: 40px;
+        height: 35px;
+        margin: 3px;
+    }
+}
+.container6 {
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            margin-top: 0px;
+            width: 100%;
+            height: 100%;
+        }
+        @media (max-width: 576px) { /* Small devices (576px and below) */
+    .container6 {
+        display:flexbox !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin-top: 0px !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+
+
+
+</style>
+</head>
+<body class="Book">
+    <header class="text-center py-4">
+        <h1 class="display-6">Contact Us</h1>
+    </header>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="rooms.html">Rooms</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="services.html">Our Services</a>
+        <a href="booking.html">Booking</a>
+        <a href="Feedback.html">Feedback</a>
+    </nav>
+    <div class="container5">
+        <div class="image-container">
+            <img src="image45.jpg" alt="Hotel Image">
+            <div class="image-text3">
+                <h1>Contact Us</h1>
+                <h3>Reach out to us for any inquiries or bookings</h3>
+            </div>
+        </div>
+    </div>  
+    <!-- Booking Process Section -->
+    <section class="container6 py-5">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4"> <!-- Adjust column sizes for medium and large devices -->
+                <div class="booking-step text-center">
+                    <div class="step-dot"></div>
+                    <div class="step-number" style="bottom: 25px;">1</div>
+                    <div class="step-title" style="font-family: 'Times New Roman', Times, serif;">Choose a Room</div>
+                    <div class="step-description" style="font-family: 'Times New Roman', Times, serif;">Select the room type and dates for your stay.</div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4"> <!-- Adjust column sizes for medium and large devices -->
+                <div class="booking-step text-center">
+                    <div class="step-dot"></div>
+                    <div class="step-number" style="bottom: 25px;">2</div>
+                    <div class="step-title" style="font-family: 'Times New Roman', Times, serif;">Reserve It</div>
+                    <div class="step-description" style="font-family: 'Times New Roman', Times, serif;">Provide your details and confirm your reservation.</div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4"> <!-- Adjust column sizes for medium and large devices -->
+                <div class="booking-step text-center">
+                    <div class="step-dot"></div>
+                    <div class="step-number" style="bottom: 25px;">3</div>
+                    <div class="step-title" style="font-family: 'Times New Roman', Times, serif;">Enjoy the Holiday</div>
+                    <div class="step-description" style="font-family: 'Times New Roman', Times, serif;">Relax and have a wonderful time at our hotel.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="contact-section" style="background-image: url('image56.jpg');">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <div class="get-in-touch">
+                        <h2>Get in Touch</h2>
+                        <p>Experience unparalleled luxury and comfort at our hotel, where every detail is meticulously crafted to exceed your expectations. Indulge in world-class amenities, personalized service, and unforgettable experiences. Get in touch today to start your extraordinary journey with us.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="contact-form-container" style="background-color: lightGray;">
+                        <h2 style="font-weight: bold;">Contact Information</h2>
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact-section">
+        <div class="map-container">
+            <div class="contact-info">
+                <p><strong><i class="fas fa-map-marker-alt" style="color: #ff5733;"></i> Address:</strong> Sandagiri Hotel, Mahaweli Raja Mawatha, Kandy Road</p>
+                <p><strong><i class="fas fa-phone" style="color: #33ff9e;"></i> Phone:</strong> +94 71 933 8312</p>
+                <p><strong><i class="far fa-envelope" style="color: #3377ff;"></i> Email:</strong> <a href="mailto:sandagiriinfo@gmail.com">sachintha15985@gmail.com</a></p>
+                <p><strong><i class="fab fa-facebook" style="color: blue;"></i> Facebook:</strong> <a href="https://www.facebook.com/sandagiri" target="_blank">Sandagiri</a></p>
+                <p><strong><i class="fab fa-youtube" style="color: red;"></i> YouTube:</strong> <a href="https://www.youtube.com/sandagiri" target="_blank">Sandagiri</a></p>
+            </div>
+        </div>
+    </section>
+    
+            <!-- Paste the Google Maps code here -->
+           <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=mahaweli%20raja%20mawatha%20keerthipura%20%20walapane%20%20+(Hotel%20Sandagiri,%20B492)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+           <a href='https://www.versicherungen.at/cyber-versicherung/'>Cyberversicherungen</a>
+            <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=172125778e6d148757ec7dca887a9ad91a720ec5'></script>
+        
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h3>About Us</h3>
+                            <p>Sadagiri, a luxurious five-star hotel nestled in the picturesque city of Kandy, offers a truly opulent experience for discerning travelers. Boasting an exquisite blend of modern elegance and cultural charm, this grand hotel stands as a symbol of sophistication and comfort.</p>
+                            <p>Situated amidst the lush landscapes of Kandy, Sadagiri provides guests with a tranquil escape from the bustling city life. The hotel's architecture reflects a harmonious fusion of contemporary design and traditional aesthetics, creating an ambiance that is both inviting and awe-inspiring.</p>
+                        </div>
+                        <div class="col-md-3">
+                            <h3>Contact Us</h3>
+                            <p>Email: sandagiriinfo@gmail.com</p>
+                            <p>Phone:  +94 71 933 8312</p>
+                            <p>Address:  Sandagiri Hotel, Mahaweli Raja Mawatha, Kandy Road</p>
+                            <br>
+                            <h3>Follow Us</h3>
+                            <ul class="social-icons">
+                                <li><a href="https://www.facebook.com/sandagiri"><i class="fab fa-facebook"></i></a></li>
+                                <li><a href="https://www.twitter.com/sandagiri"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="https://www.instagram.com/sandagiri"><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                       
+                        <div class="col-md-3">
+                            <h3>Newsletter</h3>
+                            <p>Subscribe to our newsletter for updates.</p>
+                            <form class="newsletter-form">
+                                <input type="email" class="form-control" placeholder="Your email">
+                                <button type="submit" class="btn btn-primary">Subscribe</button>
+                            </form>
+                        </div>
+                        <div class="col-md-3">
+                            <h3>Gallery</h3>
+                            <div class="gallery">
+                                <img src="image21.jpg" alt="Image 1">
+                                <img src="image13.jpg" alt="Image 2">
+                                <img src="image48.jpg" alt="Image 3"><br>
+                                <img src="image52.jpg" alt="Image 4">
+                                <img src="image57.jpg" alt="Image 5">
+                                <img src="image34.jpg" alt="Image 6"><br>
+                                <img src="image26.jpg" alt="Image 7">
+                                <img src="image12.jpg" alt="Image 8">
+                                <img src="image3.jpg" alt="Image 9">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script>
+                $(document).ready(function() {
+                    $('.newsletter-form').submit(function(e) {
+                        e.preventDefault(); // Prevent form submission
+                        // Here, you can perform form validation and AJAX submission
+                        alert('Thank you for subscribing!');
+                    });
+                });
+            </script>
+            <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get the form element
+        var form = document.querySelector('.contact-form');
+
+        // Add event listener for form submission
+        form.addEventListener('submit', function(event) {
+            // Prevent the default form submission behavior
+            event.preventDefault();
+
+            // Get form input values
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+
+            // Here you can add code to send the form data to your server using AJAX if needed
+            // For demonstration purposes, we'll simply display an alert message
+            alert('Thank you, ' + name + '! Your message has been successfully sent.');
+            
+            // Reset the form fields after submission
+            form.reset();
+        });
+
+        // Debugging: Check if the form is selected
+        console.log(form);
+    });
+</script>
+
+            
+            <!-- Bootstrap JS -->
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            <footer>
+                <p>&copy;Copyright- 2024 Sadagiri Hotels by S&C Group. All rights reserved.</p>
+            </footer>
+</body>
+</html>

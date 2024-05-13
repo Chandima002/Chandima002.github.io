@@ -1,0 +1,342 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    color: white;
+    width: 100%;
+}
+header{
+    background-color: green;
+    text-align: center;
+    padding: 10px;
+    color: black;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
+nav{
+    background-color: white;
+    padding: 15px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+nav a{
+    color:black;
+    text-decoration:none;
+    padding: 10px;
+    margin: 10px;
+    font-weight: bold;
+}
+nav a:hover{
+    background-color:lightgray;
+}
+.image-container1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.image-text1 {
+    position: absolute;
+    margin-top: 10%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(79, 76, 76, 0.5); /* Add black background color with 50% opacity */
+    padding: 100px; /* Add some padding to the text */
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+
+.image-text1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.image-text1 h1 {
+    font-size: 50px;
+    margin: 0;
+    color: #fff;
+}
+
+.image-text1 h3 {
+    font-size: 25px;
+    margin: 0;
+    color: #fff;
+}
+
+.mySlides {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    padding: 10px;
+    font-size: 38px;
+    font-weight: bold;
+}
+.accommodations{
+    color: black;
+    max-width: 1100px;
+    margin-left: 200px; 
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+.roomshotel{
+    text-align: center;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between; /* Distribute items evenly */
+    margin: 10px;
+}
+
+.image-wrapper {
+    flex-basis: calc(25% - 20px); /* Each image wrapper takes up 25% of the width minus margin */
+    height: 280px; /* Set a fixed height for the image wrapper */
+    width: 1500px;
+    position: relative; /* Position images relative to their wrapper */
+    display: inline-block;
+    padding: 50px;
+    opacity: 0; /* Initially hide images */
+    transform: translateY(200px); /* Move images down initially */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Add transition for smooth animation */
+}
+.image-wrapper.show {
+    opacity: 1; /* Show images when scrolled into view */
+    transform: translateY(0); /* Move images up */
+}
+
+.image-wrapper img {
+    width: 100%; /* Make images responsive */
+    height: 100%; /* Ensure images fill the entire height of the wrapper */
+    object-fit: cover; /* Maintain aspect ratio and cover the entire wrapper */
+}
+
+.image-text {
+    position: absolute; /* Position text relative to the image */
+    top: 50%; /* Align text vertically in the middle */
+    left: 50%; /* Align text horizontally in the middle */
+    transform: translate(-50%, -50%); /* Center text within the image */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white; /* Text color */
+    padding: 10px; /* Add padding to text */
+    opacity: 0; /* Initially hide text */
+    transition: opacity 0.3s ease; /* Add transition effect */
+}
+
+.image-wrapper:hover .image-text {
+    opacity: 1; /* Show text on hover */
+}
+.content {
+    flex: 1; /* Take up remaining space */
+    padding: 20px; /* Add padding to the content */
+}
+.hotel {
+    width: 500px;
+    height: 450px;
+    margin-left: 20px; /* Add some margin to separate the image from the content */
+}
+#accommodation{
+    color: goldenrod;
+}
+.Topic{
+    font-family: 'Times New Roman', Times, serif;
+    font-size:45px;
+}
+/* hotel services*/
+.services{
+    color: black;
+    max-width: 1100px;
+    margin-left: 200px; 
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+.serve {
+    text-align: left;
+    overflow: hidden;
+    position: relative;
+}
+
+.text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 5px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.image-with-text {
+    position: absolute;
+}
+
+.image-with-text img {
+    width: 100%; /* Ensure the image fills its container */
+    height: 200px; /* Allow the height to adjust based on content */
+    object-fit: cover; 
+}
+
+.container{
+    text-align:center;
+    margin-left:300px;
+    margin-right:300px;
+    color: black;
+    padding: 50px;
+    max-width:800px
+}
+.facilities{
+    color: black;
+    max-width: 1100px;
+    margin-left: 200px; 
+    display: flex;
+    align-items: left; /* Align items vertically */  
+}
+.booking-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin: 10px;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+    
+}
+.image-with-booking-section {
+    position: relative;
+}
+.background-image {
+    display: block;
+    width: 100%; /* Ensure the image takes up the full width of its container */
+    height: 800px; /* Maintain aspect ratio */
+    /* Add additional styling as needed */
+}
+.text-overlay {
+    position: absolute;
+    top: 100px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 40px 40px;
+    font-size: 35px;
+}
+
+.text-overlay p {
+    margin: 0;
+    font-weight: bold;
+    color: #333; /* Adjust text color as needed */
+}
+.division {
+    width: 25%;
+    height: 150px;
+    border: 4px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.division1{
+    width: 25%;
+    height: 150px;
+    border: 4px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: goldenrod;
+}
+
+.dropdown,
+.guests {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.dropdown select,
+.guests select {
+    padding: 5px;
+    border: none;
+    outline: none;
+    margin: 0 10px;
+}
+
+.dropdown i,
+.guests i {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* Style the arrow icons */
+.dropdown i.fa-chevron-down,
+.guests i.fa-chevron-down {
+    transform: rotate(180deg);
+}
+p{
+    color: black;
+}
+.StarfMembers{
+    padding: 20px 0;
+    text-align: center;
+    color: black;
+    font-weight: bolder;
+}
+article {
+    display:inline-block;
+    width: 300px;
+    margin: 5px;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  article p {
+    font-weight: bold;
+  }
+  
+  article img {
+    border-radius: 100%;
+    margin-bottom: 10px;
+    width: 25.0px;
+    height: 250px;
+  }
+footer {
+    background-color: goldenrod;
+    text-align: center;
+    position:relative; /* Change to absolute or relative */
+    bottom: 0; /* Position at the bottom of the page */
+    width: 100%; /* Take up full width */
+    font-size:12px;
+    padding: 2px;
+    color: white; /* Set text color to contrast with background */
+}
+
+
+/* Home Page */
+
+/* About us Page */
+
+/* Rooms Page */
+
+/* contact us  Page */
+
+/* our services  Page */
+

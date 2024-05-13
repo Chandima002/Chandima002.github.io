@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Sandagiri Hotel</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="styles1.css">
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+      <style>
+        .font-times {
+    font-family: 'Times New Roman', Times, serif;
+}
+.custom-btn {
+    background-color: goldenrod;
+}
+
+        .StarfMembers {
+    padding: 20px;
+}
+
+.Topic {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.members {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.members p {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.members img {
+    border-radius: 50%;
+    width: 250px; /* Set width */
+    height: 250px; /* Set height */
+    object-fit: cover; /* Maintain aspect ratio */
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 992px) {
+    .col-lg-4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+/* footer styles */
+.footer {
+        background-color: black;
+        color: #fff;
+        padding: 10px 0;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .footer .col-md-3 {
+    padding: 0; /* Remove padding from all columns */
+    max-width: 360px;
+    padding: 5px;
+}
+    .footer h3 {
+        color: #fff;
+    }
+
+    .footer p {
+        margin-bottom: 10px;
+        color: white;
+    }
+
+    .social-icons {
+        list-style: none;
+        padding: 0;
+    }
+
+    .social-icons li {
+        display: inline-block; /* Display social icons horizontally */
+        margin-right: 10px;
+    }
+
+    .social-icons li:last-child {
+        margin-right: 0;
+    }
+
+    .social-icons a {
+        color: #fff;
+        font-size: 20px;
+    }
+
+    .social-icons a:hover {
+        color: #ffd700;
+    }
+
+    .newsletter-form {
+        margin-top: 20px;
+    }
+
+    .newsletter-form input[type="email"] {
+        width: 80%;
+        padding: 10px;
+        border: none;
+        border-radius: 3px;
+        margin-right: 5px; /* Adjusted margin */
+        float:left; /* Align left */
+        margin-bottom: 5px;
+    }
+
+    .newsletter-form button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 3px;
+        background-color: #ffd700;
+        color: #333;
+        cursor: pointer;
+        float: left; /* Align left */
+        margin-right: 5px; /* Adjusted margin */
+    }
+
+    .newsletter-form button:hover {
+        background-color: #ffcc00;
+    }
+
+    .gallery {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .gallery img {
+        width: 60px;
+        height: 50px;
+        margin: 5px;
+    }
+
+    .gallery p {
+        color: #fff;
+    }
+    @media only screen and (max-width: 992px) {
+    /* Adjust column width for medium-sized devices */
+    .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* Adjust column width for smaller devices */
+    .col-lg-4, .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* Adjustments for small devices such as smartphones */
+@media only screen and (max-width: 576px) {
+    /* Reduce padding for smaller screens */
+    .footer .col-md-3 {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    /* Adjust font size for smaller screens */
+    .footer h3 {
+        font-size: 16px;
+    }
+
+    .footer p {
+        font-size: 14px;
+    }
+
+    .social-icons a {
+        font-size: 18px;
+    }
+
+    .newsletter-form input[type="email"] {
+        width: 70%;
+        font-size: 14px;
+    }
+
+    .newsletter-form button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    /* Adjust gallery image size for smaller screens */
+    .gallery img {
+        width: 40px;
+        height: 35px;
+        margin: 3px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    /* Adjust column width for medium-sized devices */
+    .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%; 
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* Adjust column width for smaller devices */
+    .col-lg-4, .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+/* For screens smaller than 576px (extra small devices like phones) */
+@media (max-width: 575.98px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .facility-box {
+    padding: 10px;
+  }
+}
+
+/* For screens between 576px and 767.98px (small devices like tablets) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+/* For screens between 768px and 991.98px (medium devices like laptops) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+/* For screens between 992px and 1199.98px (large devices like desktops) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* For screens 1200px and larger (extra large devices like large desktops) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* Adjustments for small devices such as smartphones */
+@media only screen and (max-width: 576px) {
+    .container-fluid {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .image-text4 {
+        position: relative;
+        bottom: auto;
+        transform: none;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 10px;
+        text-align: left;
+        padding-left: 20px;
+        font-family: 'Times New Roman', Times, serif;
+        width: auto;
+    }
+    .text {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        color: black;
+        font-size: 16px;
+        font-weight: bold;
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 5px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .image-with-text {
+        position: relative;
+    }
+    .image-with-text img {
+        width: 100%; /* Ensure the image fills its container */
+        height: auto; /* Allow the height to adjust based on content */
+        object-fit: cover;
+    }
+    .col-md-6,
+    .col-lg-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .gallery img {
+        width: 40px; /* Decrease image size for better fit on small screens */
+        height: 40px;
+        margin: 3px; /* Adjust margin for smaller spacing */
+    }
+    .newsletter-form input[type="email"],
+    .newsletter-form button {
+        width: 100%; /* Make form elements full width */
+        float: none; /* Remove floating */
+        margin-right: 0; /* Remove margin-right */
+        margin-bottom: 10px; /* Add space between form elements */
+    }
+}
+
+.accommodations{
+    color: black;
+    max-width: 1100px;
+    margin-left: 200px; 
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+.roomshotel{
+    text-align: center;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between; /* Distribute items evenly */
+    margin: 10px;
+}
+
+.image-wrapper {
+    flex-basis: calc(25% - 20px); /* Each image wrapper takes up 25% of the width minus margin */
+    height: 280px; /* Set a fixed height for the image wrapper */
+    width: 1500px;
+    position: relative; /* Position images relative to their wrapper */
+    display: inline-block;
+    padding: 50px;
+    opacity: 0; /* Initially hide images */
+    transform: translateY(200px); /* Move images down initially */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Add transition for smooth animation */
+}
+.image-wrapper.show {
+    opacity: 1; /* Show images when scrolled into view */
+    transform: translateY(0); /* Move images up */
+}
+
+.image-wrapper img {
+    width: 100%; /* Make images responsive */
+    height: 100%; /* Ensure images fill the entire height of the wrapper */
+    object-fit: cover; /* Maintain aspect ratio and cover the entire wrapper */
+}
+
+.image-text {
+    position: absolute; /* Position text relative to the image */
+    top: 50%; /* Align text vertically in the middle */
+    left: 50%; /* Align text horizontally in the middle */
+    transform: translate(-50%, -50%); /* Center text within the image */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white; /* Text color */
+    padding: 10px; /* Add padding to text */
+    opacity: 0; /* Initially hide text */
+    transition: opacity 0.3s ease; /* Add transition effect */
+}
+
+.image-wrapper:hover .image-text {
+    opacity: 1; /* Show text on hover */
+}
+.content {
+    flex: 1; /* Take up remaining space */
+    padding: 20px; /* Add padding to the content */
+}
+.hotel {
+    width: 500px;
+    height: 450px;
+    margin-left: 20px; /* Add some margin to separate the image from the content */
+}
+#accommodation{
+    color: goldenrod;
+}
+.Topic{
+    font-family: 'Times New Roman', Times, serif;
+    font-size:45px;
+}
+/* hotel services*/
+.services{
+    color: black;
+    max-width: 1100px;
+    margin-left: 200px; 
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+.serve {
+    text-align: left;
+    overflow: hidden;
+    position: relative;
+}
+
+.text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 5px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.image-with-text {
+    position: absolute;
+}
+
+.image-with-text img {
+    width: 100%; /* Ensure the image fills its container */
+    height: 200px; /* Allow the height to adjust based on content */
+    object-fit: cover; 
+}
+
+.container{
+    text-align:center;
+    margin-left:300px;
+    margin-right:300px;
+    color: black;
+    padding: 50px;
+    max-width:800px
+}
+.facilities{
+    color: black;
+    max-width: 1100px;
+    margin-left: 200px; 
+    display: flex;
+    align-items: left; /* Align items vertically */  
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    color: white;
+    width: 100%;
+}
+header{
+    background-color: green;
+    text-align: center;
+    padding: 10px;
+    color: black;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
+nav{
+    background-color: white;
+    padding: 15px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+nav a{
+    color:black;
+    text-decoration:none;
+    padding: 10px;
+    margin: 10px;
+    font-weight: bold;
+}
+nav a:hover{
+    background-color:lightgray;
+}
+.image-container1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.image-text1 {
+    position: absolute;
+    margin-top: 10%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(79, 76, 76, 0.5); /* Add black background color with 50% opacity */
+    padding: 100px; /* Add some padding to the text */
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+
+.image-text1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.image-text1 h1 {
+    font-size: 50px;
+    margin: 0;
+    color: #fff;
+}
+
+.image-text1 h3 {
+    font-size: 25px;
+    margin: 0;
+    color: #fff;
+}
+
+.mySlides {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    padding: 10px;
+    font-size: 38px;
+    font-weight: bold;
+}
+      </style>
+    </head>
+    <body class="Home">
+        <header class="text-center py-4">
+            <h1 class="display-6">Welcome to Sandagiri Hotel</h1>
+        </header>
+        
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="rooms.html">Rooms</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="services.html">Our Services</a>
+            <a href="booking.html">Booking</a>
+            <a href="Feedback.html">Feedback</a>
+        </nav>
+
+        <div class="container-fluid">
+            <section class="image-container1">
+                <div class="image-text1">
+                    <h3>The Best</h3> 
+                    <h1>Hotel</h1> 
+                    <h3>in Nuwara Eliya</h3>
+                </div>
+                <img class="mySlides" src="image9.jpg" alt="Hotel Image">
+                
+                <div class="image-text1">
+                    <h3>The Best</h3> 
+                    <h1>Hotel</h1> 
+                    <h3>in Nuwara Eliya</h3>
+                </div>
+                <img class="mySlides" src="image2.jpg" alt="Hotel Image">
+                
+                <div class="image-text1">
+                    <h3>The Best</h3> 
+                    <h1>Hotel</h1> 
+                    <h3>in Nuwara Eliya</h3>
+                </div>
+                <img class="mySlides" src="image1.jpg" alt="Hotel Image">
+            </section>
+        </div>
+        
+
+       <section class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="Topic">Hotel Sandagiri</h2>
+            <h3 class="text-muted" style="font-style: italic; color: goldenrod;">Your haven of comfort and luxury</h3>
+            <p class="welcome" style="font-family: 'Times New Roman', Times, serif;">"Welcome to Sandagiri Hotel, where luxury meets tranquility. Discover a haven of elegance nestled amidst the breathtaking landscapes of Nuwara Eliya. Our boutique hotel offers 
+                discerning travelers a retreat of refined comfort and personalized service. From our exquisite accommodations to our world-class dining experiences and rejuvenating spa treatments, every moment at Sandagiri 
+                Hotel is crafted to exceed your expectations. Come immerse yourself in the serenity of our surroundings and indulge in the finest hospitality that Sandagiri has to offer."</p>
+        </div>
+    </div>
+</section>
+
+        <section class="accommodations">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="content text-left">
+                            <p id="accommodation" class="font-times">ACCOMMODATIONS</p>
+                            <h1 class="Topic font-times">City Best Luxury Stay</h1>
+                            <p class="font-times">"Hotel Sandagiri" offers unparalleled accommodation experiences in the heart of urban landscapes. 
+                                Our meticulously designed rooms and suites redefine luxury living, blending modern sophistication with the city's vibrant energy.
+                                From stylish furnishings to state-of-the-art amenities, every detail is crafted to exceed the expectations of discerning travelers.
+                                Whether you're seeking a peaceful retreat or a lavish urban escape, indulge in the epitome of comfort and elegance at "Hotel Sandagiri".
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img class="hotel" src="image15.jpg" alt="Hotel Image" style="width: 100%; height: auto;">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="roomshotel">
+            <div class="image-container">
+                <div class="image-wrapper">
+                    <img src="image17.jpg" alt="Image 1">
+                    <div class="image-text"style="color: white;">City View</div>
+                </div>
+                <div class="image-wrapper">
+                    <img src="image11.jpg" alt="Image 2">
+                    <div class="image-text" style="color: white;">Lake View</div>
+                </div>
+                <div class="image-wrapper">
+                    <img src="image12.jpg" alt="Image 3">
+                    <div class="image-text" style="color: white;">Suite Room</div>
+                </div>
+                <div class="image-wrapper">
+                    <img src="image3.jpg" alt="Image 4">
+                    <div class="image-text" style="color: white;">King Room</div>
+            </div>
+    </section>
+    <section class="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="content text-left">
+                        <p id="accommodation"class="font-times">HOTEL SERVICES</p>
+                        <h1 class="Topic font-times">Discover All Rooms & Best Suites</h1>
+                        <p class="font-times">Discover our extensive selection of rooms and suites, tailored to meet every traveler's needs.
+                            From cozy retreats to luxurious accommodations, our hotel offers a diverse range of options for a comfortable stay.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img class="service" src="image18.jpg" alt="Hotel Image" style="width: 100%; height: auto;">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+   <section class="serve">
+    <div class="image-container">
+        <div class="image-wrapper">
+            <div class="image-with-text">
+                <img src="image19.jpg" alt="Bed Room Image">
+                <div class="text">Double Room</div>
+            </div>
+        </div>
+        <div class="image-wrapper">
+            <div class="image-with-text">
+                <img src="image3.jpg" alt="King room Image">
+                <div class="text">King Room</div>
+            </div>
+        </div>
+        <div class="image-wrapper">
+            <div class="image-with-text">
+                <img src="image20.jpg" alt="Family Room">
+                <div class="text">Family Room</div>
+            </div>
+        </div>
+        <div class="image-wrapper">
+            <div class="image-with-text">
+                <img src="image21.jpg" alt="Luxuary room">
+                <div class="text">Luxuary Suite</div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="facilities">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="content text-left">
+                    <p id="accommodation" class="font-times">HOTEL FACILITIES</p>
+                    <h1 class="Topic font-times">Check The Best Seasonal Promo & Sale</h1>
+                    <p class="font-times">Indulge in opulent amenities at our luxury hotel, where every detail is tailored to elevate your experience.
+                        From lavish accommodations and fine dining to rejuvenating spa treatments, immerse yourself in unparalleled comfort and luxury.
+                        Discover a world of sophistication and impeccable service, where every moment exceeds expectations.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img class="facility" src="image22.jpg" alt="Hotel Image" style="width: 100%; height: auto;">
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container-fuid">
+    <div class="row">
+        <div class="col-md-12">
+            <section class="image-with-booking-section">
+                <img class="background-image img-fluid" src="image23.jpg" alt="Background Image">
+                <div class="text-overlay">
+                    <p class="font-times">CHECK AVAILABILITY</p>
+                </div>
+                <section class="booking-section">
+                    <div class="division">
+                        <p class="font-times">CHECK-IN</p>
+                        <div class="dropdown">
+                            <select id="check-in-date">
+                                <!-- Date options will be added dynamically here -->
+                            </select>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+
+                    <div class="division">
+                        <p class="font-times">CHECK-OUT</p>
+                        <div class="dropdown">
+                            <select id="check-out-date">
+                                <!-- Date options will be added dynamically here -->
+                            </select>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+
+                    <div class="division">
+                        <p class="font-times">NUMBER OF GUESTS</p>
+                        <div class="guests">
+                            <i class="fas fa-chevron-up"></i>
+                            <select>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <!-- Add more options as needed -->
+                            </select>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="division1">
+                        <button id="check-availability-btn" class="btn btn-primary custom-btn">CHECK AVAILABILITY</button>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </div>
+</div>
+
+<section class="StarfMembers">
+    <h2 class="Topic">Our Starf Members</h2>
+    <div class="row">
+        <div class="col-lg-4 col-md-6">
+            <div class="members">
+                <p>Chandima Wickramsinghe</p>
+                <img src="image5.jpg" alt="CEO image" class="img-fluid">
+                <p>Chief Executive Officer (CEO)</p>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="members">
+                <p>Sachintha Dilahan Vandavoll</p>
+                <img src="image6.jpg" alt="Manager image" class="img-fluid">
+                <p>General Manager (GM)</p>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="members">
+                <p>Shriyananda Vandavoll</p>
+                <img src="image7.jpg" alt="Director of Operations image" class="img-fluid">
+                <p>Director of Operations</p>
+            </div>
+        </div>
+    </div>
+</section>
+ <footer class="footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <h3>About Us</h3>
+                <p>Sadagiri, a luxurious five-star hotel nestled in the picturesque city of Kandy, offers a truly opulent experience for discerning travelers. Boasting an exquisite blend of modern elegance and cultural charm, this grand hotel stands as a symbol of sophistication and comfort.</p>
+                <p>Situated amidst the lush landscapes of Kandy, Sadagiri provides guests with a tranquil escape from the bustling city life. The hotel's architecture reflects a harmonious fusion of contemporary design and traditional aesthetics, creating an ambiance that is both inviting and awe-inspiring.</p>
+            </div>
+            <div class="col-md-3">
+                <h3>Contact Us</h3>
+                <p>Email: sandagiriinfo@gmail.com</p>
+                <p>Phone:  +94 71 933 8312</p>
+                <p>Address:  Sandagiri Hotel, Mahaweli Raja Mawatha, Kandy Road</p>
+                <br>
+                <h3>Follow Us</h3>
+                <ul class="social-icons">
+                    <li><a href="https://www.facebook.com/sandagiri"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://www.twitter.com/sandagiri"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/sandagiri"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+           
+            <div class="col-md-3">
+                <h3>Newsletter</h3>
+                <p>Subscribe to our newsletter for updates.</p>
+                <form class="newsletter-form">
+                    <input type="email" class="form-control" placeholder="Your email">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+            <div class="col-md-3">
+                <h3>Gallery</h3>
+                <div class="gallery">
+                    <img src="image21.jpg" alt="Image 1">
+                    <img src="image44.jpg" alt="Image 2">
+                    <img src="image48.jpg" alt="Image 3"><br>
+                    <img src="image52.jpg" alt="Image 4">
+                    <img src="image57.jpg" alt="Image 5">
+                    <img src="image33.jpg" alt="Image 6"><br>
+                    <img src="image26.jpg" alt="Image 7">
+                    <img src="image12.jpg" alt="Image 8">
+                    <img src="image3.jpg" alt="Image 9">
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.newsletter-form').submit(function(e) {
+            e.preventDefault(); // Prevent form submission
+            // Here, you can perform form validation and AJAX submission
+            alert('Thank you for subscribing!');
+        });
+    });
+</script>
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<footer>
+    <p>&copy;Copyright- 2024 Sadagiri Hotels by S&C Group. All rights reserved.</p>
+</footer>
+<script>
+    // Automatic Slideshow - change image every 3 seconds
+    var myIndex = 0;
+    carousel();
+    
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+         x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}
+      x[myIndex-1].style.display = "block";
+      setTimeout(carousel, 3000);
+    }
+    </script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        window.addEventListener("scroll", function() {
+            var elements = document.querySelectorAll(".image-wrapper");
+            var screenHeight = window.innerHeight;
+            
+            elements.forEach(function(element) {
+                var position = element.getBoundingClientRect().top;
+                
+                if (position < screenHeight * 0.75) {
+                    element.classList.add("show");
+                } else {
+                    element.classList.remove("show");
+                }
+            });
+        });
+    });
+</script>
+<script>
+    // Get the select elements
+    const checkInSelect = document.getElementById("check-in-date");
+    const checkOutSelect = document.getElementById("check-out-date");
+
+    // Function to generate date options
+    function generateDateOptions() {
+        // Get today's date
+        const today = new Date();
+
+        // Loop to generate date options for the next 7 days
+        for (let i = 0; i < 7; i++) {
+            // Create a new Date object for each day
+            const date = new Date(today);
+            date.setDate(today.getDate() + i);
+
+            // Format the date as YYYY-MM-DD
+            const formattedDate = date.toISOString().split("T")[0];
+
+            // Create an option element for check-in
+            const checkInOption = document.createElement("option");
+            checkInOption.value = formattedDate;
+            checkInOption.textContent = date.toDateString();
+
+            // Create an option element for check-out
+            const checkOutOption = document.createElement("option");
+            checkOutOption.value = formattedDate;
+            checkOutOption.textContent = date.toDateString();
+
+            // Append the option to the select elements
+            checkInSelect.appendChild(checkInOption);
+            checkOutSelect.appendChild(checkOutOption);
+        }
+    }
+
+    // Call the function to generate date options
+    generateDateOptions();
+</script>
+
+<script>
+    // Function to handle button click event
+    document.getElementById("check-availability-btn").addEventListener("click", function() {
+        // Display Bootstrap modal
+        $('#availabilityModal').modal('show');
+    });
+</script>
+
+<!-- Bootstrap modal dialog -->
+<div class="modal fade" id="availabilityModal" tabindex="-1" role="dialog" aria-labelledby="availabilityModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="availabilityModalLabel">Availability Details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to proceed to booking?</p>
+            </div>
+            <div class="modal-footer">
+                <a href="booking.html" class="btn btn-primary">Proceed to Booking</a>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

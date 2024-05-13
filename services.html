@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+    .container4 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 0px;
+            margin-left: 0px ;
+        }
+
+        .image-container {
+            position: relative;
+            margin-right:0;
+        }
+
+        .image-container img {
+            max-width: 100vw;
+            height: auto;
+            display: block;
+        }
+
+        .image-text4 {
+            position: absolute;
+            bottom: -20%;
+            transform: translate(0, -50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color:white;
+            padding: 10px;
+            text-align: left;
+            padding-left: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            width: 100vw ;
+        }
+        .font-times {
+    font-family: 'Times New Roman', Times, serif;
+}
+.text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 5px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.image-with-text {
+    position: absolute;
+}
+
+.image-with-text img {
+    width: 100%; /* Ensure the image fills its container */
+    height: 200px; /* Allow the height to adjust based on content */
+    object-fit: cover; 
+}
+.container-serve {
+    text-align: left;
+    overflow: hidden;
+    position: relative;
+}
+
+
+        /*footer styles*/
+    .footer {
+        background-color: black;
+        color: #fff;
+        padding: 10px 0;
+    }
+    .footer .col-md-3 {
+    padding: 0; /* Remove padding from all columns */
+    max-width: 360px;
+    padding: 5px;
+}
+    .footer h3 {
+        color: #fff;
+    }
+
+    .footer p {
+        margin-bottom: 10px;
+        color: white;
+    }
+
+    .social-icons {
+        list-style: none;
+        padding: 0;
+    }
+
+    .social-icons li {
+        display: inline-block; /* Display social icons horizontally */
+        margin-right: 10px;
+    }
+
+    .social-icons li:last-child {
+        margin-right: 0;
+    }
+
+    .social-icons a {
+        color: #fff;
+        font-size: 20px;
+    }
+
+    .social-icons a:hover {
+        color: #ffd700;
+    }
+
+    .newsletter-form {
+        margin-top: 20px;
+    }
+
+    .newsletter-form input[type="email"] {
+        width: 80%;
+        padding: 10px;
+        border: none;
+        border-radius: 3px;
+        margin-right: 5px; /* Adjusted margin */
+        float:left; /* Align left */
+        margin-bottom: 5px;
+    }
+
+    .newsletter-form button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 3px;
+        background-color: #ffd700;
+        color: #333;
+        cursor: pointer;
+        float: left; /* Align left */
+        margin-right: 5px; /* Adjusted margin */
+    }
+
+    .newsletter-form button:hover {
+        background-color: #ffcc00;
+    }
+
+    .gallery {
+        text-align: center;
+        margin-top: 20px;
+        margin-right: 0px;
+    }
+
+    .gallery img {
+        width: 60px;
+        height: 50px;
+        margin: 5px;
+    }
+
+    .gallery p {
+        color: #fff;
+    }
+    @media only screen and (max-width: 992px) {
+    /* Adjust column width for medium-sized devices */
+    .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* Adjust column width for smaller devices */
+    .col-lg-4, .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* Adjustments for small devices such as smartphones */
+/* Add this CSS inside your <style> tag */
+
+/* Adjustments for small devices such as smartphones */
+@media only screen and (max-width: 576px) {
+    .container-fluid {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .image-text4 {
+        position: relative;
+        bottom: auto;
+        transform: none;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 10px;
+        text-align: left;
+        padding-left: 20px;
+        font-family: 'Times New Roman', Times, serif;
+        width: auto;
+    }
+    .text {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        color: black;
+        font-size: 16px;
+        font-weight: bold;
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 5px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .image-with-text {
+        position: relative;
+    }
+    .image-with-text img {
+        width: 100%; /* Ensure the image fills its container */
+        height: auto; /* Allow the height to adjust based on content */
+        object-fit: cover;
+    }
+    .col-md-6,
+    .col-lg-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .gallery img {
+        width: 40px; /* Decrease image size for better fit on small screens */
+        height: 40px;
+        margin: 3px; /* Adjust margin for smaller spacing */
+    }
+    .newsletter-form input[type="email"],
+    .newsletter-form button {
+        width: 100%; /* Make form elements full width */
+        float: none; /* Remove floating */
+        margin-right: 0; /* Remove margin-right */
+        margin-bottom: 10px; /* Add space between form elements */
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    /* Adjust column width for medium-sized devices */
+    .services .row {
+        flex-direction: column-reverse; /* Change the direction of flex items */
+    }
+    .services .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-top: 20px; /* Add margin between the columns */
+    }
+    .services .col-md-6 img {
+        width: 100%; /* Make the image fill the column width */
+        height: auto; /* Allow the height to adjust based on content */
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    /* Adjustments for small devices such as smartphones */
+    .services .row {
+        flex-direction: column; /* Change the direction of flex items */
+    }
+    .services .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-top: 0; /* Remove margin from top */
+    }
+    .services .col-md-6 img {
+        width: 100%; /* Make the image fill the column width */
+        height: auto; /* Allow the height to adjust based on content */
+    }
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    color: white;
+    width: 100%;
+}
+header{
+    background-color: green;
+    text-align: center;
+    padding: 10px;
+    color: black;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
+nav{
+    background-color: white;
+    padding: 15px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+nav a{
+    color:black;
+    text-decoration:none;
+    padding: 10px;
+    margin: 10px;
+    font-weight: bold;
+}
+nav a:hover{
+    background-color:lightgray;
+}
+footer {
+    background-color: goldenrod;
+    text-align: center;
+    position:relative; /* Change to absolute or relative */
+    bottom: 0; /* Position at the bottom of the page */
+    width: 100%; /* Take up full width */
+    font-size:12px;
+    padding: 2px;
+    color: white; /* Set text color to contrast with background */
+}
+.accommodations{
+    color: black;
+    max-width: 1100px;
+    margin-left: 200px; 
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+.roomshotel{
+    text-align: center;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between; /* Distribute items evenly */
+    margin: 10px;
+}
+
+.image-wrapper {
+    flex-basis: calc(25% - 20px); /* Each image wrapper takes up 25% of the width minus margin */
+    height: 280px; /* Set a fixed height for the image wrapper */
+    width: 1500px;
+    position: relative; /* Position images relative to their wrapper */
+    display: inline-block;
+    padding: 50px;
+    opacity: 0; /* Initially hide images */
+    transform: translateY(200px); /* Move images down initially */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Add transition for smooth animation */
+}
+.image-wrapper.show {
+    opacity: 1; /* Show images when scrolled into view */
+    transform: translateY(0); /* Move images up */
+}
+
+.image-wrapper img {
+    width: 100%; /* Make images responsive */
+    height: 100%; /* Ensure images fill the entire height of the wrapper */
+    object-fit: cover; /* Maintain aspect ratio and cover the entire wrapper */
+}
+
+.image-text {
+    position: absolute; /* Position text relative to the image */
+    top: 50%; /* Align text vertically in the middle */
+    left: 50%; /* Align text horizontally in the middle */
+    transform: translate(-50%, -50%); /* Center text within the image */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white; /* Text color */
+    padding: 10px; /* Add padding to text */
+    opacity: 0; /* Initially hide text */
+    transition: opacity 0.3s ease; /* Add transition effect */
+}
+
+.image-wrapper:hover .image-text {
+    opacity: 1; /* Show text on hover */
+}
+.content {
+    flex: 1; /* Take up remaining space */
+    padding: 20px; /* Add padding to the content */
+}
+.hotel {
+    width: 500px;
+    height: 450px;
+    margin-left: 20px; /* Add some margin to separate the image from the content */
+}
+#accommodation{
+    color: goldenrod;
+}
+.Topic{
+    font-family: 'Times New Roman', Times, serif;
+    font-size:45px;
+}
+/* hotel services*/
+.services{
+    color: black;
+    max-width: 1100px;
+    margin-left: 200px; 
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+.serve {
+    text-align: left;
+    overflow: hidden;
+    position: relative;
+}
+
+.text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 5px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.image-with-text {
+    position: absolute;
+}
+
+.image-with-text img {
+    width: 100%; /* Ensure the image fills its container */
+    height: 200px; /* Allow the height to adjust based on content */
+    object-fit: cover; 
+}
+
+.container{
+    text-align:center;
+    margin-left:300px;
+    margin-right:300px;
+    color: black;
+    padding: 50px;
+    max-width:800px
+}
+.facilities{
+    color: black;
+    max-width: 1100px;
+    margin-left: 200px; 
+    display: flex;
+    align-items: left; /* Align items vertically */  
+}
+</style>
+    </head>
+    <body>
+        <body class="Services">
+            <header class="text-center py-4">
+                <h1 class="display-6">Our Services</h1>
+            </header>
+            <nav>
+                <a href="home.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="rooms.html">Rooms</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="services.html">Our Services</a>
+                <a href="booking.html">Booking</a>
+                <a href="Feedback.html">Feedback</a>
+            </nav>
+                           
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="image-container">
+                            <img src="image60.jpg" alt="Hotel Image" class="img-fluid">
+                        </div>
+                    <div class="col-md-6">
+                        <div class="image-text4">
+                            <h1>About Our Services</h1>
+                            <h4>We offer a wide range of services to make your stay comfortable and enjoyable. From luxurious accommodations to delicious dining options, we have everything you need for a memorable experience.</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="container-fluid">
+                    <section class="services">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="content text-left">
+                                    <p id="accommodation" class="font-times">FOOD AND BEVERAGE</p>
+                                    <h1 class="Topic font-times">Taste The Extraordinary Flavors</h1>
+                                    <p class="font-times">Indulge in a culinary journey at our hotel's exquisite food and beverage outlets. Experience a symphony of flavors with our diverse dining options, ranging from elegant fine dining restaurants to cozy cafes and vibrant bars.
+                                        Savor meticulously crafted dishes prepared by our talented chefs, using the freshest ingredients sourced locally and globally. Whether you're craving international cuisine or local specialties, our menus cater to every palate.
+                                        Complement your meal with a selection of refreshing beverages, including handcrafted cocktails, premium wines, and artisanal coffees. Sit back, relax, and immerse yourself in the vibrant ambiance of our dining venues,
+                                        where every bite and sip promises a memorable experience.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 d-flex align-items-center justify-content-center">
+                                <img class="img-fluid w-150" src="image25.jpg" alt="Hotel Image">
+                            </div>
+                        </div>
+                    </section>
+                
+</div>
+<section class="serve">
+    <div class="container4-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="image-wrapper">
+                    <div class="image-with-text">
+                        <img src="image26.jpg" alt="FOOD" class="img-fluid img-responsive">
+                        <div class="text">Dinner Special</div>
+                    </div>
+                </div>
+            </div>
+        <div class="col-md-3">
+            <div class="image-wrapper">
+                <div class="image-with-text">
+                    <img src="image27.jpg" alt="FOOD" class="img-fluid img-responsive">
+                        <div class="text">Lunch Buffet</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+                <div class="image-wrapper">
+                    <div class="image-with-text">
+                        <img src="image28.jpg" alt="FOOD" class="img-fluid">
+                        <div class="text">Welcome Drinks</div>
+                    </div>
+                </div>
+            </div>
+        <div class="col-md-3">
+                <div class="image-wrapper">
+                    <div class="image-with-text">
+                        <img src="image30.jpg" alt="FOOD" class="img-fluid">
+                        <div class="text">Breakfast</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="services">
+    <div class="container4-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="content">
+                    <p id="accommodation"class="font-times">BAR AND CLUB FACILITIES</p>
+                    <h1 class="Topic font-times">Drink Crafted Cocktails In Elegant Ambiance</h1>
+                    <p class="font-times">Our hotel bar and club combine elegance with excitement, offering an unforgettable nightlife experience. Step into our stylish bar, where expert mixologists craft artisanal cocktails and pour premium spirits in a sophisticated setting. As the evening unfolds, transition to our vibrant club, where live DJs spin energetic beats and the dance floor comes alive. Whether you're savoring drinks with friends or dancing the night away, our bar and club provide the perfect backdrop for an evening of fun and luxury.</p>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex align-items-center justify-content-center">
+                <img class="img-fluid w-150" src="image29.jpg" alt="Hotel Image">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="serve">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="image-wrapper">
+                    <div class="image-with-text">
+                        <img src="image32.jpg" alt="FOOD" class="img-fluid">
+                        <div class="text">Bar</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="image-wrapper">
+                    <div class="image-with-text">
+                        <img src="image33.png" alt="food" class="img-fluid">
+                        <div class="text">Mini Bar</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="image-wrapper">
+                    <div class="image-with-text">
+                        <img src="image33.jpg" alt="Food" class="img-fluid">
+                        <div class="text">Enjoying Club</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="image-wrapper">
+                    <div class="image-with-text">
+                        <img src="image31.jpg" alt="food" class="img-fluid">
+                        <div class="text">Lion's Club</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <section class="services">
+        <div class="container4-fluid ">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="content">
+                        <p id="accommodation"class="font-times">ROOM SERVICE</p>
+                        <h1 class="Topic font-times">Exceptional Service Delivered To You</h1>
+                        <p class="font-times">Experience unparalleled convenience and comfort with our hotel room service. From delectable dining options to essential amenities,
+                            we cater to your every need, ensuring a seamless and enjoyable stay. Whether you're craving a gourmet meal, a refreshing beverage,
+                            or simply require extra towels, our attentive staff is available 24/7 to fulfill your requests with efficiency and care. Relax and
+                            indulge in the privacy of your room, knowing that we're here to enhance your stay with personalized service and attention to detail.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-center justify-content-center">
+                    <img class="service img-fluid" src="image37.jpg" alt="Hotel Image">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="serve">
+        <div class="container4-fluid">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="image-wrapper">
+                        <div class="image-with-text">
+                            <img src="image34.jpg" alt="FOOD" class="img-fluid">
+                            <div class="text">Double Room</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="image-wrapper">
+                        <div class="image-with-text">
+                            <img src="image35.jpg" alt="food" class="img-fluid">
+                            <div class="text">King Room</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="image-wrapper">
+                        <div class="image-with-text">
+                            <img src="image36.jpg" alt="Food" class="img-fluid">
+                            <div class="text">Family Room</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="image-wrapper">
+                        <div class="image-with-text">
+                            <img src="image38.jpg" alt="food" class="img-fluid">
+                            <div class="text">Luxury Suite</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</section>
+<section class="services">
+    <div class="container4-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="content">
+                    <p id="accommodation" class="font-times">SPA AND WELLNESS</p>
+                    <h1 class="Topic font-times">Relaxation And Rejuvenation At Spa</h1>
+                    <p class="font-times">At our spa, find a tranquil escape, tailored treatments, and a serene atmosphere promoting relaxation and rejuvenation.
+                        Our holistic therapies nurture both body and mind, leaving you refreshed and revitalized. 
+                        Experience self-care as an essential part of a balanced lifestyle with our personalized approach to wellness.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex align-items-center justify-content-center">
+                <img class="service img-fluid" src="image39.jpg" alt="Hotel Image">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="serve">
+    <div class="container4-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="image-wrapper">
+                    <div class="image-with-text">
+                        <img src="image42.jpg" alt="Spa" class="img-fluid">
+                        <div class="text">Massaging</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="image-wrapper">
+                    <div class="image-with-text">
+                        <img src="image41.jpg" alt="food" class="img-fluid">
+                        <div class="text">Keeping your Mind Relax</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="image-wrapper">
+                    <div class="image-with-text">
+                        <img src="image40.jpg" alt="Food" class="img-fluid">
+                        <div class="text">Materials</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="image-wrapper">
+                    <div class="image-with-text">
+                        <img src="image43.jpg" alt="food" class="img-fluid">
+                        <div class="text">Ayurvedic Ingredients</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <h3>About Us</h3>
+                <p>Sadagiri, a luxurious five-star hotel nestled in the picturesque city of Kandy, offers a truly opulent experience for discerning travelers. Boasting an exquisite blend of modern elegance and cultural charm, this grand hotel stands as a symbol of sophistication and comfort.</p>
+                <p>Situated amidst the lush landscapes of Kandy, Sadagiri provides guests with a tranquil escape from the bustling city life. The hotel's architecture reflects a harmonious fusion of contemporary design and traditional aesthetics, creating an ambiance that is both inviting and awe-inspiring.</p>
+            </div>
+            <div class="col-md-3">
+                <h3>Contact Us</h3>
+                <p>Email: sandagiriinfo@gmail.com</p>
+                <p>Phone:  +94 71 933 8312</p>
+                <p>Address:  Sandagiri Hotel, Mahaweli Raja Mawatha, Kandy Road</p>
+                <br>
+                <h3>Follow Us</h3>
+                <ul class="social-icons">
+                    <li><a href="https://www.facebook.com/sandagiri"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://www.twitter.com/sandagiri"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/sandagiri"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+           
+            <div class="col-md-3">
+                <h3>Newsletter</h3>
+                <p>Subscribe to our newsletter for updates.</p>
+                <form class="newsletter-form">
+                    <input type="email" class="form-control" placeholder="Your email">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+            <div class="col-md-3">
+                <h3>Gallery</h3>
+                <div class="gallery">
+                    <img src="image21.jpg" alt="Image 1">
+                    <img src="image13.jpg" alt="Image 2">
+                    <img src="image48.jpg" alt="Image 3"><br>
+                    <img src="image52.jpg" alt="Image 4">
+                    <img src="image57.jpg" alt="Image 5">
+                    <img src="image34.jpg" alt="Image 6"><br>
+                    <img src="image26.jpg" alt="Image 7">
+                    <img src="image12.jpg" alt="Image 8">
+                    <img src="image3.jpg" alt="Image 9">
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.newsletter-form').submit(function(e) {
+            e.preventDefault(); // Prevent form submission
+            // Here, you can perform form validation and AJAX submission
+            alert('Thank you for subscribing!');
+        });
+    });
+</script>
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<footer>
+  <p>&copy;Copyright- 2024 Sadagiri Hotels by S&C Group. All rights reserved.</p>
+    </footer>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                window.addEventListener("scroll", function() {
+                    var elements = document.querySelectorAll(".image-wrapper");
+                    var screenHeight = window.innerHeight;
+                    
+                    elements.forEach(function(element) {
+                        var position = element.getBoundingClientRect().top;
+                        
+                        if (position < screenHeight * 0.75) {
+                            element.classList.add("show");
+                        } else {
+                            element.classList.remove("show");
+                        }
+                    });
+                });
+            });
+        </script>
+    
+    </body>

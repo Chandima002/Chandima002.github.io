@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About us</title>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="styles1.css"> <!-- Assuming you have a separate CSS file for styles -->
+<style>
+    .facility-title {
+      color: #333; /* Black color for facility titles */
+      font-size: 18px;
+    }
+    .facility-description {
+      color: #666; /* Gray color for facility descriptions */
+      font-size: 16px;
+    }
+    .facility-box {
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
+    .facility-icon {
+      font-size: 24px;
+      color: goldenrod; /* Goldenrod color for icons */
+    }
+    /* Ensure images are the same size */
+    .facility-img {
+      height: 200px; /* Adjust the height as needed */
+      width: 100%;
+      object-fit: cover;
+    }
+    .container {
+    width: 100%; /* Set container width to 100% of the viewport */
+    max-width: 100%; /* Ensure container doesn't exceed viewport width */
+    margin-left: 0; /* Remove any left margin */
+    align-items: center;
+   }
+   .container5 {
+        width: 100%;
+        overflow: hidden; /* To prevent overflow of image outside container */
+    }
+
+    .image-container {
+        position: relative;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .image-container img {
+        width: 100%; /* Make the image width 100% of its container */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Remove any default inline spacing */
+    }
+
+    .image-text3 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white; /* Set text color to white for better visibility */
+        background-color: #666;
+        padding: 10px;
+    }
+/* footer styles */
+    .footer {
+        background-color: black;
+        color: #fff;
+        padding: 10px 0;
+    }
+    .footer .col-md-3 {
+    padding: 0; /* Remove padding from all columns */
+    max-width: 360px;
+    padding: 5px;
+}
+    .footer h3 {
+        color: #fff;
+    }
+
+    .footer p {
+        margin-bottom: 10px;
+        color: white;
+    }
+
+    .social-icons {
+        list-style: none;
+        padding: 0;
+    }
+
+    .social-icons li {
+        display: inline-block; /* Display social icons horizontally */
+        margin-right: 10px;
+    }
+
+    .social-icons li:last-child {
+        margin-right: 0;
+    }
+
+    .social-icons a {
+        color: #fff;
+        font-size: 20px;
+    }
+
+    .social-icons a:hover {
+        color: #ffd700;
+    }
+
+    .newsletter-form {
+        margin-top: 20px;
+    }
+
+    .newsletter-form input[type="email"] {
+        width: 80%;
+        padding: 10px;
+        border: none;
+        border-radius: 3px;
+        margin-right: 5px; /* Adjusted margin */
+        float:left; /* Align left */
+        margin-bottom: 5px;
+    }
+
+    .newsletter-form button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 3px;
+        background-color: #ffd700;
+        color: #333;
+        cursor: pointer;
+        float: left; /* Align left */
+        margin-right: 5px; /* Adjusted margin */
+    }
+
+    .newsletter-form button:hover {
+        background-color: #ffcc00;
+    }
+
+    .gallery {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .gallery img {
+        width: 60px;
+        height: 50px;
+        margin: 5px;
+    }
+
+    .gallery p {
+        color: #fff;
+    }
+ 
+
+/* Adjustments for small devices such as smartphones */
+@media only screen and (max-width: 576px) {
+    .container-fluid {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .image-text4 {
+        position: relative;
+        bottom: auto;
+        transform: none;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 10px;
+        text-align: left;
+        padding-left: 20px;
+        font-family: 'Times New Roman', Times, serif;
+        width: auto;
+    }
+    .text {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        color: black;
+        font-size: 16px;
+        font-weight: bold;
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 5px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .image-with-text {
+        position: relative;
+    }
+    .image-with-text img {
+        width: 100%; /* Ensure the image fills its container */
+        height: auto; /* Allow the height to adjust based on content */
+        object-fit: cover;
+    }
+    .col-md-6,
+    .col-lg-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .gallery img {
+        width: 40px; /* Decrease image size for better fit on small screens */
+        height: 40px;
+        margin: 3px; /* Adjust margin for smaller spacing */
+    }
+    .newsletter-form input[type="email"],
+    .newsletter-form button {
+        width: 100%; /* Make form elements full width */
+        float: none; /* Remove floating */
+        margin-right: 0; /* Remove margin-right */
+        margin-bottom: 10px; /* Add space between form elements */
+    }
+}
+
+</style>
+</head>
+<body>
+    <body class="Book">
+      <header class="text-center py-4">
+        <h1 class="display-6">About Us</h1>
+    </header>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="rooms.html">Rooms</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="services.html">Our Services</a>
+            <a href="booking.html">Booking</a>
+            <a href="Feedback.html">Feedback</a>
+        </nav>
+        <div class="container-fluid">
+          <div class="row">
+              <div class="col-lg-12 container5">
+                  <div class="image-container">
+                      <img src="image58.jpg" alt="About Us Image">
+                      <div class="image-text3">
+                          <h1>About Us</h1>
+                          <h3>Learn more about our story and services</h3>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+             <!-- About Us Section -->
+            <section class="container py-5">
+              <div class="row">
+                  <div class="col-lg-8">
+                      <h2 class="mb-4"style="font-weight:bold;">About Sadagiri Hotel</h2>
+                      <p>Sadagiri, a luxurious five-star hotel nestled in the picturesque city of Kandy, offers a truly opulent experience for discerning travelers. Boasting an exquisite blend of modern elegance and cultural charm, this grand hotel stands as a symbol of sophistication and comfort.</p>
+                      <p>Situated amidst the lush landscapes of Kandy, Sadagiri provides guests with a tranquil escape from the bustling city life. The hotel's architecture reflects a harmonious fusion of contemporary design and traditional aesthetics, creating an ambiance that is both inviting and awe-inspiring.</p>
+                      <p>The lavish accommodations at Sadagiri are meticulously designed to cater to the highest standards of luxury. Spacious rooms and suites are adorned with elegant furnishings, offering panoramic views of the scenic surroundings. Guests can indulge in world-class amenities, including fine dining restaurants, a rejuvenating spa, and state-of-the-art fitness facilities.</p>
+                      <p>The hotel's commitment to impeccable service is evident in every aspect of the guest experience. Attentive and courteous staff members ensure that every need is met with a genuine smile, creating a warm and welcoming atmosphere throughout the property.</p>
+                      <p>Sadagiri's prime location in Kandy allows guests to explore the rich cultural heritage of the city, including iconic landmarks such as the Temple of the Tooth and the Royal Botanical Gardens. Whether savoring gourmet cuisine, relaxing by the poolside, or engaging in cultural excursions, Sadagiri offers an unparalleled blend of luxury and authenticity for an unforgettable stay in the heart of Kandy.</p>
+                  </div>
+                  <div class="col-lg-4">
+                      <!-- You can add any additional content or images here -->
+                      <img src="image57.jpg" class="img-fluid" alt="Hotel Image">
+                  </div>
+              </div>
+          </section>
+        
+            <div class="row mt-5">
+                <div class="col-lg-6" style="background-color: rgb(232, 203, 42); padding: 20px;">
+                    <h3>Our Mission</h3>
+                    <p>At Sandagiri Hotel, our mission is to exceed our guests' expectations by providing personalized service, luxurious accommodations, and memorable experiences.</p>
+                </div>
+                <div class="col-lg-6" style="background-color: rgb(229, 213, 118); padding: 20px;">
+                    <h3>Our Vision</h3>
+                    <p>Our vision is to become the preferred choice for travelers seeking luxury and comfort, setting the standard for excellence in hospitality.</p>
+                </div>
+            </div>
+
+  
+            
+<div class="container mt-5 text-center">
+    <h3 class="text-center mb-4" style="font-weight: bold;">Our Facilities</h3>
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="facility-box">
+          <img src="image47.jpg" class="facility-img mb-3" alt="Free Wi-Fi">
+          <i class="fas fa-wifi fa-fw facility-icon"></i> <span class="facility-title">Free Wi-Fi</span>
+          <p class="facility-description">Stay connected with high-speed internet access available throughout the hotel.</p>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="facility-box">
+          <img src="image48.jpg" class="facility-img mb-3" alt="Swimming Pool">
+          <i class="fas fa-swimming-pool fa-fw facility-icon"></i> <span class="facility-title">Swimming Pool</span>
+          <p class="facility-description">Enjoy a refreshing swim in our spacious swimming pool, perfect for relaxation and leisure.</p>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="facility-box">
+          <img src="image49.jpg" class="facility-img mb-3" alt="Private Bathroom">
+          <i class="fas fa-shower fa-fw facility-icon"></i> <span class="facility-title">Private Bathroom</span>
+          <p class="facility-description">Indulge in the privacy of your own bathroom equipped with modern amenities.</p>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="facility-box">
+          <img src="image50.jpg" class="facility-img mb-3" alt="Breakfast Included">
+          <i class="fas fa-utensils fa-fw facility-icon"></i> <span class="facility-title">Breakfast Included</span>
+          <p class="facility-description">Start your day right with a complimentary delicious breakfast served at our dining area.</p>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="facility-box">
+          <img src="image51.jpg" class="facility-img mb-3" alt="Parking">
+          <i class="fas fa-car fa-fw facility-icon"></i> <span class="facility-title">Parking</span>
+          <p class="facility-description">Convenient parking facilities available for guests, ensuring hassle-free arrival and departure.</p>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="facility-box">
+          <img src="image39.jpg" class="facility-img mb-3" alt="Spa and Wellness Center">
+          <i class="fas fa-spa fa-fw facility-icon"></i> <span class="facility-title">Spa and Wellness Center</span>
+          <p class="facility-description">Rejuvenate your body and mind with a range of spa treatments and wellness services offered at our onsite spa.</p>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="facility-box">
+          <img src="image35.jpg" class="facility-img mb-3" alt="Room Service">
+          <i class="fas fa-concierge-bell fa-fw facility-icon"></i> <span class="facility-title">Room Service</span>
+          <p class="facility-description">Experience luxury and convenience with our prompt and attentive room service available round the clock.</p>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="facility-box">
+          <img src="image30.jpg" class="facility-img mb-3" alt="Food and Beverage Services">
+          <i class="fas fa-cocktail fa-fw facility-icon"></i> <span class="facility-title">Food and Beverage Services</span>
+          <p class="facility-description">Savor delicious culinary delights and refreshing beverages at our onsite restaurant and bar.</p>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="facility-box">
+          <img src="image52.jpg" class="facility-img mb-3" alt="Outdoor Terrace">
+          <i class="fas fa-sun fa-fw facility-icon"></i> <span class="facility-title">Outdoor Terrace</span>
+          <p class="facility-description">Relax and unwind in the fresh air of our outdoor terrace, offering stunning views and serene ambiance.</p>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="facility-box">
+          <img src="image53.jpg" class="facility-img mb-3" alt="Fitness Center">
+          <i class="fas fa-dumbbell fa-fw facility-icon"></i> <span class="facility-title">Fitness Center</span>
+          <p class="facility-description">Maintain your fitness routine while traveling with our state-of-the-art fitness center equipped with modern exercise equipment.</p>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="facility-box">
+          <img src="image54.jpg" class="facility-img mb-3" alt="Bicycle Rental">
+          <i class="fas fa-bicycle fa-fw facility-icon"></i> <span class="facility-title">Bicycle Rental</span>
+          <p class="facility-description">Explore the surroundings and enjoy outdoor adventures with our bicycle rental services available for guests.</p>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="facility-box">
+        <img src="image55.jpg" class="facility-img mb-3" alt="Shopping Area">
+  <i class="fas fa-shopping-bag fa-fw facility-icon"></i> <span class="facility-title">Shopping Area</span>
+  <p class="facility-description">Indulge in retail therapy at nearby shopping areas, offering a variety of stores and boutiques for your shopping needs.</p>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <footer class="footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <h3>About Us</h3>
+                <p>Sadagiri, a luxurious five-star hotel nestled in the picturesque city of Kandy, offers a truly opulent experience for discerning travelers. Boasting an exquisite blend of modern elegance and cultural charm, this grand hotel stands as a symbol of sophistication and comfort.</p>
+                <p>Situated amidst the lush landscapes of Kandy, Sadagiri provides guests with a tranquil escape from the bustling city life. The hotel's architecture reflects a harmonious fusion of contemporary design and traditional aesthetics, creating an ambiance that is both inviting and awe-inspiring.</p>
+            </div>
+            <div class="col-md-3">
+                <h3>Contact Us</h3>
+                <p>Email: sandagiriinfo@gmail.com</p>
+                <p>Phone:  +94 71 933 8312</p>
+                <p>Address:  Sandagiri Hotel, Mahaweli Raja Mawatha, Kandy Road</p>
+                <br>
+                <h3>Follow Us</h3>
+                <ul class="social-icons">
+                    <li><a href="https://www.facebook.com/sandagiri"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://www.twitter.com/sandagiri"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/sandagiri"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+           
+            <div class="col-md-3">
+                <h3>Newsletter</h3>
+                <p>Subscribe to our newsletter for updates.</p>
+                <form class="newsletter-form">
+                    <input type="email" class="form-control" placeholder="Your email">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+            <div class="col-md-3">
+                <h3>Gallery</h3>
+                <div class="gallery">
+                    <img src="image21.jpg" alt="Image 1">
+                    <img src="image13.jpg" alt="Image 2">
+                    <img src="image48.jpg" alt="Image 3"><br>
+                    <img src="image52.jpg" alt="Image 4">
+                    <img src="image57.jpg" alt="Image 5">
+                    <img src="image34.jpg" alt="Image 6"><br>
+                    <img src="image26.jpg" alt="Image 7">
+                    <img src="image12.jpg" alt="Image 8">
+                    <img src="image3.jpg" alt="Image 9">
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.newsletter-form').submit(function(e) {
+            e.preventDefault(); // Prevent form submission
+            // Here, you can perform form validation and AJAX submission
+            alert('Thank you for subscribing!');
+        });
+    });
+</script>
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<footer>
+  <p>&copy;Copyright- 2024 Sadagiri Hotels by S&C Group. All rights reserved.</p>
+</footer>
+</body>
+</html>  

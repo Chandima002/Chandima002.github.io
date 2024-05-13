@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Booking</title>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="styles1.css"> <!-- Assuming you have a separate CSS file for styles -->
+<style>
+    body {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    overflow-x: hidden; /* Hide horizontal overflow */
+}
+.image-container1 {
+    position: relative;
+    width: 75%; /* Set width to 75% of the viewport width */
+    height: auto;
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px; /* Add 20px padding for all sides */
+}
+
+.image-container1 img {
+    width: 100%; /* Set image width to 100% of its container */
+    height: auto; /* Set height to auto to maintain aspect ratio */
+    display: block; /* Ensure the image is displayed as a block element */
+}
+
+    .image-container {
+        position: relative;
+        margin-right: 20px;
+    }
+    .image-container img {
+        max-width: 100%; /* Adjusted to make the image responsive */
+        height: auto; /* Adjusted to make the image responsive */
+        display: block;
+    }
+    .image-text3 {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(0, -50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 10px;
+    }
+        
+    .form-container {
+        margin-top: 50px;
+        color: black;
+        padding: 10px;
+    }
+
+    .form-container .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-container .requests {
+        height: 200px;
+    }
+
+    .form-container .mandatory-text {
+        color: red;
+    }
+    .container-fluid {
+    width: 100vw; /* Use viewport width to cover the entire screen */
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 0; /* Center the container horizontally */
+    margin-left: auto; /* Center the container horizontally */
+}
+    /* footer styles*/
+    .footer {
+        background-color: black;
+        color: #fff;
+        padding: 5px;
+        width: 100vw; /* Use viewport width to cover the entire screen */
+        margin-right: 0;
+         margin-left: 0;
+    }
+    .footer .col-md-3 {
+    margin: 0;
+    padding: 0; /* Remove padding from all columns */
+    max-width: 360px;
+    padding: 5px;
+   }
+   .footer .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+   .footer .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+   }
+    .footer h3 {
+        color: #fff;
+    }
+
+    .footer p {
+        margin-bottom: 10px;
+        color: white;
+    }
+
+    .social-icons {
+        list-style: none;
+        padding: 0;
+    }
+
+    .social-icons li {
+        display: inline-block; /* Display social icons horizontally */
+        margin-right: 10px;
+    }
+
+    .social-icons li:last-child {
+        margin-right: 0;
+    }
+
+    .social-icons a {
+        color: #fff;
+        font-size: 20px;
+    }
+
+    .social-icons a:hover {
+        color: #ffd700;
+    }
+
+    .newsletter-form {
+        margin-top: 20px;
+    }
+
+    .newsletter-form input[type="email"] {
+        width: 80%;
+        padding: 10px;
+        border: none;
+        border-radius: 3px;
+        margin-right: 5px; /* Adjusted margin */
+        float:left; /* Align left */
+        margin-bottom: 5px;
+    }
+
+    .newsletter-form button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 3px;
+        background-color: #ffd700;
+        color: #333;
+        cursor: pointer;
+        float: left; /* Align left */
+        margin-right: 5px; /* Adjusted margin */
+    }
+
+    .newsletter-form button:hover {
+        background-color: #ffcc00;
+    }
+
+    .gallery {
+        text-align: center;
+        margin-top: 20px;
+        margin-right: 0px;
+    }
+
+    .gallery img {
+        width: 50px; /* Adjust width for three images in a row */
+        height: auto;
+       margin: 5px;
+       display: inline-block; /* Display images inline */
+    }
+
+    .gallery p {
+        color: #fff;
+    }
+    /* Adjust container width for small devices */
+@media (max-width: 576px) {
+    .container {
+        padding: 0;
+    }
+}
+
+/* Adjust footer width for small devices */
+@media (max-width: 576px) {
+    .footer {
+        padding: 5px;
+        width: 100%; /* Adjust width to fill the entire screen */
+    }
+}
+
+/* Adjust margin for "Booking Details" section for small devices */
+@media (max-width: 576px) {
+    .container.mt-5 {
+        margin-top: 10px; /* Adjust margin to fit within the screen */
+    }
+}
+.col-md-6 {
+    padding: 20px; /* Add padding to the div */
+}
+
+img[src='image11.jpg'] {
+    max-width: 100%; /* Decrease the max-width to reduce the image size */
+    height: auto;
+}
+@media only screen and (max-width: 992px) {
+    /* Adjust column width for medium-sized devices */
+    .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* Adjust column width for smaller devices */
+    .col-lg-4, .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+/* For screens smaller than 576px (extra small devices like phones) */
+@media (max-width: 575.98px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .facility-box {
+    padding: 10px;
+  }
+}
+
+/* For screens between 576px and 767.98px (small devices like tablets) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+/* For screens between 768px and 991.98px (medium devices like laptops) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+/* For screens between 992px and 1199.98px (large devices like desktops) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* For screens 1200px and larger (extra large devices like large desktops) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* Adjustments for small devices such as smartphones */
+@media only screen and (max-width: 576px) {
+    .container-fluid {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .image-text4 {
+        position: relative;
+        bottom: auto;
+        transform: none;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 10px;
+        text-align: left;
+        padding-left: 20px;
+        font-family: 'Times New Roman', Times, serif;
+        width: auto;
+    }
+    .text {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        color: black;
+        font-size: 16px;
+        font-weight: bold;
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 5px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .image-with-text {
+        position: relative;
+    }
+    .image-with-text img {
+        width: 100%; /* Ensure the image fills its container */
+        height: auto; /* Allow the height to adjust based on content */
+        object-fit: cover;
+    }
+    .col-md-6,
+    .col-lg-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .gallery img {
+        width: 40px; /* Decrease image size for better fit on small screens */
+        height: 40px;
+        margin: 3px; /* Adjust margin for smaller spacing */
+    }
+    .newsletter-form input[type="email"],
+    .newsletter-form button {
+        width: 100%; /* Make form elements full width */
+        float: none; /* Remove floating */
+        margin-right: 0; /* Remove margin-right */
+        margin-bottom: 10px; /* Add space between form elements */
+    }
+}
+</style>
+</head>
+<body>
+    <header class="text-center py-4">
+        <h1 class="display-6">Booking</h1>
+    </header>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="room1.html">Rooms</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="services.html">Our Services</a>
+        <a href="booking1.html">Booking</a>
+        <a href="Feedback.html">Feedback</a>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="image-container1">
+                    <img src="image24.jpg" class="img-fluid" alt="Hotel Image">
+                    <div class="image-text3">
+                        <h1>Special Offer</h1>
+                        <h3>Book now and get 20% off</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="container-fluid">
+    <h2 style="color: black;margin-left:20px;">Booking Details</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <img src="image11.jpg"style="max-width: 100%; height: auto;margin-left:10px;">
+        </div>
+        <div class="col-md-6">
+            <div class="form-container">
+                <h2>Add Your Information</h2>
+                <form id="reservationForm" class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="name">Name <span class="mandatory-text">*</span></label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email <span class="mandatory-text">*</span></label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                            <small class="form-text text-muted">Required field</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <input type="text" class="form-control" id="address" placeholder="Enter your address">
+                        </div>
+                        <div class="form-group">
+                            <label for="country">Country</label>
+                            <input type="text" class="form-control" id="country" placeholder="Enter your country">
+                        </div>
+                        <div class="form-group">
+                            <label for="requests">Requests</label>
+                            <textarea class="form-control requests" id="requests" placeholder="Enter any special requests"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="surname">Surname <span class="mandatory-text">*</span></label>
+                            <input type="text" class="form-control" id="surname" placeholder="Enter your surname" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telephone">Telephone <span class="mandatory-text">*</span></label>
+                            <input type="tel" class="form-control" id="telephone" placeholder="Enter your telephone number" required>
+                            <small class="form-text text-muted">Required field</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" class="form-control" id="city" placeholder="Enter your city">
+                        </div>
+                        <div class="form-group">
+                            <label for="zip">ZIP</label>
+                            <input type="text" class="form-control" id="zip" placeholder="Enter your ZIP code">
+                        </div>
+                        <div class="form-group">
+                            <label for="arrival">Arrival Time</label>
+                            <select class="form-control" id="arrival">
+                                <option value="unknown">I do not know</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="coupon">Coupon</label>
+                            <input type="text" class="form-control" id="coupon" placeholder="Enter your coupon code">
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="terms">
+                            <label class="form-check-label" for="terms">I agree to the terms and conditions *</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+                <div id="successMessage" style="display: none;" class="alert alert-success mt-3" role="alert">
+                    Reservation successful! Proceed to checkout.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <h3>About Us</h3>
+                <p>Sadagiri, a luxurious five-star hotel nestled in the picturesque city of Kandy, offers a truly opulent experience for discerning travelers. Boasting an exquisite blend of modern elegance and cultural charm, this grand hotel stands as a symbol of sophistication and comfort.</p>
+                <p>Situated amidst the lush landscapes of Kandy, Sadagiri provides guests with a tranquil escape from the bustling city life. The hotel's architecture reflects a harmonious fusion of contemporary design and traditional aesthetics, creating an ambiance that is both inviting and awe-inspiring.</p>
+            </div>
+            <div class="col-md-3">
+                <h3>Contact Us</h3>
+                <p>Email: sandagiriinfo@gmail.com</p>
+                <p>Phone:  +94 71 933 8312</p>
+                <p>Address:  Sandagiri Hotel, Mahaweli Raja Mawatha, Kandy Road</p>
+                <br>
+                <h3>Follow Us</h3>
+                <ul class="social-icons">
+                    <li><a href="https://www.facebook.com/sandagiri"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://www.twitter.com/sandagiri"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/sandagiri"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+           
+            <div class="col-md-3">
+                <h3>Newsletter</h3>
+                <p>Subscribe to our newsletter for updates.</p>
+                <form class="newsletter-form">
+                    <input type="email" class="form-control" placeholder="Your email">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+            <div class="col-md-3">
+                <h3>Gallery</h3>
+                <div class="gallery">
+                    <img src="image21.jpg" alt="Image 1">
+                    <img src="image13.jpg" alt="Image 2">
+                    <img src="image48.jpg" alt="Image 3"><br>
+                    <img src="image52.jpg" alt="Image 4">
+                    <img src="image57.jpg" alt="Image 5">
+                    <img src="image34.jpg" alt="Image 6"><br>
+                    <img src="image26.jpg" alt="Image 7">
+                    <img src="image12.jpg" alt="Image 8">
+                    <img src="image3.jpg" alt="Image 9">
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.newsletter-form').submit(function(e) {
+            e.preventDefault(); // Prevent form submission
+            // Here, you can perform form validation and AJAX submission
+            alert('Thank you for subscribing!');
+        });
+    });
+</script>
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<footer>
+  <p>&copy;Copyright- 2024 Sadagiri Hotels by S&C Group. All rights reserved.</p>
+</footer>
+
+<script>
+    var select = document.getElementById("arrival");
+
+    var hours = ["12:00 AM", "01:00 AM", "02:00 AM", "03:00 AM", "04:00 AM", "05:00 AM", "06:00 AM", "07:00 AM", "08:00 AM", "09:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "01:00 PM", "02:00 PM", "03:00 PM", "04:00 PM", "05:00 PM", "06:00 PM", "07:00 PM", "08:00 PM", "09:00 PM", "10:00 PM", "11:00 PM"];
+
+    for (var i = 0; i < hours.length; i++) {
+        var option = document.createElement("option");
+        option.text = hours[i] + " - " + hours[(i + 1) % 24];
+        select.add(option);
+    }
+</script>
+<script>
+    document.getElementById("reservationForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+        var coupon = document.getElementById("coupon").value;
+        var termsChecked = document.getElementById("terms").checked;
+
+        // Check if coupon is valid and terms are agreed
+        if (coupon !== "" && termsChecked) {
+            document.getElementById("successMessage").style.display = "block";
+            // Here you can redirect to the checkout page or perform other actions
+        } else {
+            alert("Please enter a valid coupon code and agree to the terms and conditions.");
+        }
+    });
+</script>
+
+</body>
+</html>

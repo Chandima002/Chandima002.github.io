@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Booking</title>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"> <!-- Assuming you have a separate CSS file for styles -->
+<style>
+    .container1 {
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+    .image-container {
+            position: relative;
+            margin-right: 20px;
+        }
+    .image-container img {
+            max-width: auto;
+            height: 750px;
+            display: block;
+            
+        }
+        .image-text3 {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(0, -50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color:white;
+            padding: 10px;
+        }
+    /* footer styles*/
+    .footer {
+        background-color: black;
+        color: #fff;
+        padding: 5px;
+    }
+    .footer .col-md-3 {
+    margin: 0;
+    padding: 0; /* Remove padding from all columns */
+    max-width: 360px;
+    padding: 5px;
+   }
+   .footer .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.footer .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+    .footer h3 {
+        color: #fff;
+    }
+
+    .footer p {
+        margin-bottom: 10px;
+        color: white;
+    }
+
+    .social-icons {
+        list-style: none;
+        padding: 0;
+    }
+
+    .social-icons li {
+        display: inline-block; /* Display social icons horizontally */
+        margin-right: 10px;
+    }
+
+    .social-icons li:last-child {
+        margin-right: 0;
+    }
+
+    .social-icons a {
+        color: #fff;
+        font-size: 20px;
+    }
+
+    .social-icons a:hover {
+        color: #ffd700;
+    }
+
+    .newsletter-form {
+        margin-top: 20px;
+    }
+
+    .newsletter-form input[type="email"] {
+        width: 80%;
+        padding: 10px;
+        border: none;
+        border-radius: 3px;
+        margin-right: 5px; /* Adjusted margin */
+        float:left; /* Align left */
+        margin-bottom: 5px;
+    }
+
+    .newsletter-form button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 3px;
+        background-color: #ffd700;
+        color: #333;
+        cursor: pointer;
+        float: left; /* Align left */
+        margin-right: 5px; /* Adjusted margin */
+    }
+
+    .newsletter-form button:hover {
+        background-color: #ffcc00;
+    }
+
+    .gallery {
+        text-align: center;
+        margin-top: 20px;
+        margin-right: 0px;
+    }
+
+    .gallery img {
+        width: 50px; /* Adjust width for three images in a row */
+        height: auto;
+       margin: 5px;
+       display: inline-block; /* Display images inline */
+    }
+
+    .gallery p {
+        color: #fff;
+    }
+    @media only screen and (max-width: 992px) {
+    /* Adjust column width for medium-sized devices */
+    .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* Adjust column width for smaller devices */
+    .col-lg-4, .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* Adjustments for small devices such as smartphones */
+@media only screen and (max-width: 576px) {
+    /* Reduce padding for smaller screens */
+    .footer .col-md-3 {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    /* Adjust font size for smaller screens */
+    .footer h3 {
+        font-size: 16px;
+    }
+
+    .footer p {
+        font-size: 14px;
+    }
+
+    .social-icons a {
+        font-size: 18px;
+    }
+
+    .newsletter-form input[type="email"] {
+        width: 70%;
+        font-size: 14px;
+    }
+
+    .newsletter-form button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    /* Adjust gallery image size for smaller screens */
+    .gallery img {
+        width: 40px;
+        height: 35px;
+        margin: 3px;
+    }
+}
+@media only screen and (max-width: 992px) {
+    /* Adjust column width for medium-sized devices */
+    .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* Adjust column width for smaller devices */
+    .col-lg-4, .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+/* For screens smaller than 576px (extra small devices like phones) */
+@media (max-width: 575.98px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .facility-box {
+    padding: 10px;
+  }
+}
+
+/* For screens between 576px and 767.98px (small devices like tablets) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+/* For screens between 768px and 991.98px (medium devices like laptops) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+/* For screens between 992px and 1199.98px (large devices like desktops) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* For screens 1200px and larger (extra large devices like large desktops) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* Adjustments for small devices such as smartphones */
+@media only screen and (max-width: 576px) {
+    .container-fluid {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .image-text4 {
+        position: relative;
+        bottom: auto;
+        transform: none;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 10px;
+        text-align: left;
+        padding-left: 20px;
+        font-family: 'Times New Roman', Times, serif;
+        width: auto;
+    }
+    .text {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        color: black;
+        font-size: 16px;
+        font-weight: bold;
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 5px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .image-with-text {
+        position: relative;
+    }
+    .image-with-text img {
+        width: 100%; /* Ensure the image fills its container */
+        height: auto; /* Allow the height to adjust based on content */
+        object-fit: cover;
+    }
+    .col-md-6,
+    .col-lg-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .gallery img {
+        width: 40px; /* Decrease image size for better fit on small screens */
+        height: 40px;
+        margin: 3px; /* Adjust margin for smaller spacing */
+    }
+    .newsletter-form input[type="email"],
+    .newsletter-form button {
+        width: 100%; /* Make form elements full width */
+        float: none; /* Remove floating */
+        margin-right: 0; /* Remove margin-right */
+        margin-bottom: 10px; /* Add space between form elements */
+    }
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    color:black;
+    width: 100%;
+}
+header{
+    background-color: green;
+    text-align: center;
+    padding: 10px;
+    color: black;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
+nav{
+    background-color: white;
+    padding: 15px;
+    text-align: center;
+}
+nav a{
+    color:black;
+    text-decoration:none;
+    padding: 10px;
+    margin: 10px;
+    font-weight: bold;
+}
+nav a:hover{
+    background-color:lightgray;
+}
+footer {
+    background-color: goldenrod;
+    text-align: center;
+    position:relative; /* Change to absolute or relative */
+    bottom: 0; /* Position at the bottom of the page */
+    width: 100%; /* Take up full width */
+    font-size:12px;
+    padding: 2px;
+    color: white; /* Set text color to contrast with background */
+}
+</style>
+</head>
+<body>
+    <header class="text-center py-4">
+        <h1 class="display-6">Booking</h1>
+    </header>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="rooms.html">Rooms</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="services.html">Our Services</a>
+        <a href="booking1.html">Booking</a>
+        <a href="Feedback.html">Feedback</a>
+    </nav>
+    <div class="container1">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="image-container">
+                    <img src="image24.jpg" alt="Hotel Image" class="img-fluid">
+                    <div class="image-text3">
+                        <h1 class="display-4">Special Offer</h1>
+                        <h3 class="lead">Book now and get 20% off</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container mt-5">
+        <h2>Booking Details</h2>
+        <div id="roomDetails">
+            <!-- Room details will be displayed here -->
+        </div>
+        <div id="bookingForm">
+            <!-- Booking form will be displayed here -->
+            <form>
+                <div class="form-group">
+                    <label for="checkInDate">Check-in Date:</label>
+                    <input type="date" class="form-control" id="checkInDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="checkOutDate">Check-out Date:</label>
+                    <input type="date" class="form-control" id="checkOutDate" required>
+                </div>
+                <!-- Add checkboxes for extra services -->
+                <div class="form-group">
+                    <label>Extra Services:</label><br>
+             <div class="form-check">
+               <input class="form-check-input" type="checkbox" id="swimmingPool" value="50">
+               <label class="form-check-label" for="swimmingPool">Swimming Pool ($50)</label>
+             </div>
+            <div class="form-check">
+             <input class="form-check-input" type="checkbox" id="breakfast" value="20">
+             <label class="form-check-label" for="breakfast">Breakfast ($20)</label>
+            </div>
+           <div class="form-check">
+             <input class="form-check-input" type="checkbox" id="roomService" value="30">
+             <label class="form-check-label" for="roomService">Room Service ($30)</label>
+           </div>
+           <div class="form-check">
+             <input class="form-check-input" type="checkbox" id="spaWellness" value="60">
+             <label class="form-check-label" for="spaWellness">Spa and Wellness ($60)</label>
+           </div>
+           <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="breakfastDinnerLunch" value="40">
+            <label class="form-check-label" for="breakfastDinnerLunch">Breakfast, Dinner, Lunch ($50)</label>
+           </div>
+           <div class="form-check">
+             <input class="form-check-input" type="checkbox" id="cleaning" value="25">
+             <label class="form-check-label" for="cleaning">Cleaning ($25)</label>
+           </div>
+                    <!-- Add more checkboxes -->
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <button type="button" class="btn btn-primary btn-block" id="calculateTotal">Calculate Total</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-secondary btn-block" id="cancelBooking">Cancel Booking</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-info btn-block" id="addInformation">Add Information</button>
+                    </div>
+                </div>
+                <div id="totalPrice" class="mt-3"></div>
+            </form>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+                    <h3>About Us</h3>
+                    <p>Sadagiri, a luxurious five-star hotel nestled in the picturesque city of Kandy, offers a truly opulent experience for discerning travelers. Boasting an exquisite blend of modern elegance and cultural charm, this grand hotel stands as a symbol of sophistication and comfort.</p>
+                    <p>Situated amidst the lush landscapes of Kandy, Sadagiri provides guests with a tranquil escape from the bustling city life. The hotel's architecture reflects a harmonious fusion of contemporary design and traditional aesthetics, creating an ambiance that is both inviting and awe-inspiring.</p>
+                </div>
+                <div class="col-md-3">
+                    <h3>Contact Us</h3>
+                    <p>Email: sandagiriinfo@gmail.com</p>
+                    <p>Phone:  +94 71 933 8312</p>
+                    <p>Address:  Sandagiri Hotel, Mahaweli Raja Mawatha, Kandy Road</p>
+                    <br>
+                    <h3>Follow Us</h3>
+                    <ul class="social-icons">
+                        <li><a href="https://www.facebook.com/sandagiri"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="https://www.twitter.com/sandagiri"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.instagram.com/sandagiri"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+               
+                <div class="col-md-3">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for updates.</p>
+                    <form class="newsletter-form">
+                        <input type="email" class="form-control" placeholder="Your email">
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+                <div class="col-md-3">
+                    <h3>Gallery</h3>
+                    <div class="gallery">
+                        <img src="image21.jpg" alt="Image 1">
+                        <img src="image13.jpg" alt="Image 2">
+                        <img src="image48.jpg" alt="Image 3"><br>
+                        <img src="image52.jpg" alt="Image 4">
+                        <img src="image57.jpg" alt="Image 5">
+                        <img src="image34.jpg" alt="Image 6"><br>
+                        <img src="image26.jpg" alt="Image 7">
+                        <img src="image12.jpg" alt="Image 8">
+                        <img src="image3.jpg" alt="Image 9">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.newsletter-form').submit(function(e) {
+                e.preventDefault(); // Prevent form submission
+                // Here, you can perform form validation and AJAX submission
+                alert('Thank you for subscribing!');
+            });
+        });
+    </script>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <footer>
+      <p>&copy;Copyright- 2024 Sadagiri Hotels by S&C Group. All rights reserved.</p>
+    </footer>
+
+<script>
+    // JavaScript to extract room details from URL and display
+    $(document).ready(function() {
+        var urlParams = new URLSearchParams(window.location.search);
+        var roomType = urlParams.get('roomType');
+        var roomPrice = parseFloat(urlParams.get('roomPrice')) || 0; // Parse room price as float, default to 0 if not available
+        var roomImage = urlParams.get('roomImage');
+        var roomDescription = urlParams.get('roomDescription');
+        
+        console.log("Room Type:", roomType);
+        console.log("Room Price:", roomPrice);
+        console.log("Room Image:", roomImage);
+        console.log("Room Description:", roomDescription);
+        
+        var roomDetailsHTML = '<h3>Room Details</h3>';
+        roomDetailsHTML += '<p>Type: ' + roomType + '</p>';
+        roomDetailsHTML += '<p>Price: $' + roomPrice.toFixed(2) + ' per night</p>'; // Format room price with 2 decimal places
+        $('#roomDetails').html(roomDetailsHTML);
+        
+        // Display room image and description
+        $('#roomDetails').append('<img src="' + roomImage + '" alt="Room Image" class="img-fluid">');
+        $('#roomDetails').append('<p>' + roomDescription + '</p>');
+
+        // Calculate total price based on selected checkboxes
+        $('#calculateTotal').click(function() {
+            var checkInDate = new Date($('#checkInDate').val());
+            var checkInDate = new Date($('#checkInDate').val());
+            var checkOutDate = new Date($('#checkOutDate').val());
+            var nights = (checkOutDate - checkInDate) / (1000 * 60 * 60 * 24);
+            var totalPrice = roomPrice * nights; // Initialize total price with room price
+
+            console.log("Check-in Date:", checkInDate);
+            console.log("Check-out Date:", checkOutDate);
+            console.log("Nights:", nights);
+            console.log("Initial Total Price:", totalPrice);
+
+            // Add extra service prices if checkboxes are checked
+            if ($('#swimmingPool').is(':checked')) {
+                totalPrice += parseFloat($('#swimmingPool').val());
+            }
+            if ($('#breakfast').is(':checked')) {
+                totalPrice += parseFloat($('#breakfast').val());
+            }
+            if ($('#roomService').is(':checked')) {
+                totalPrice += parseFloat($('#roomService').val());
+            }
+            if ($('#spaWellness').is(':checked')) {
+                totalPrice += parseFloat($('#spaWellness').val());
+            }
+            if ($('#breakfastDinnerLunch').is(':checked')) {
+                totalPrice += parseFloat($('#breakfastDinnerLunch').val());
+            }
+            if ($('#cleaning').is(':checked')) {
+                totalPrice += parseFloat($('#cleaning').val());
+            }
+            // Add more services here if needed
+
+            console.log("Final Total Price:", totalPrice);
+
+            $('#totalPrice').html('<h3>Total Price: $' + totalPrice.toFixed(2) + '</h3>'); // Format total price with 2 decimal places
+        });
+
+        // Cancel booking
+        $('#cancelBooking').click(function() {
+            $('#bookingForm')[0].reset(); // Reset form fields
+            $('#totalPrice').empty(); // Clear total price
+        });
+
+        // Add information button click event
+        $('#addInformation').click(function() {
+            // Redirect to the booking.html page
+            window.location.href = 'booking1.html';
+        });
+    });
+</script>
+
+
+</body>
+</html>
